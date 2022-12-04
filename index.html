@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    .right_header
+    {
+        padding-right: 0.5cm;
+    }
+    .left_header_adopt
+    {
+    color: #6504b5;
+    font-size: large;
+   display: inline;
+    }
+    /* styling search bar */
+    .search input[type=text]{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #6504b5;
+    }
+    .search{
+        background-color:#6504b5;
+        background-image: url("https://www.petfinder.com/sites/default/files/styles/hero_image_667_235/public/images/content/667%20hero_0.jpg?itok=mwPI7hr1");
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        padding: 7%;
+    }
+    .butt {
+        background-image: url("search-icon.png");
+        background-size: cover;
+        height:50px;
+        width:50px;   
+     }
+    .btn {
+        border: none;
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding: 12px 16px;
+        position: absolute;
+        right: 30px;
+        cursor: pointer;
+      }
+      .btn .heart
+      {
+        display: inline;
+        position: absolute;
+        left: 110px;
+      }
+        .heart
+    {
+        display: inline;
+        border: none;
+        content: 300px;
+        padding: 0px 22px;
+        top:24px;
+        cursor: pointer;
+    }
+    .dropbtn {
+        background-image: url("menu-bar.png");
+        height: 27px;
+        width: 27px;
+        border: none;
+      }
+      
+      
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        top:15px;
+        right:16px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin:0px ;
+        right: 0px;
+        top: 40px;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        display: flex;
+        flex: column;
+        justify-items: end;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+      
+      .btn .dropdown{
+        background-image: url("menu-bar.png");
+        height: 27px;
+        width: 27px;
+        border: none;
+        left: 10px;
+        bottom: 0px;
+        top: 8px;
+        z-index: 1;
+      }
+      .btn-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin:0px ;
+        right: 0px;
+        top: 40px;
+      }
+      .btn-content a {
+        float: none;
+        color: black;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: flex;
+        flex: column;
+        justify-items: end;
+      }
+      .btn:hover .btn-content {
+        display: block;
+      }
+      .btn-content a:hover{
+        background-color: aqua;
+      }
+     .buttons
+     {
+        margin: 3em;
+        width: 120px;
+        height: 120px;
+     }
+     .buttons.dog
+     {
+        background-image: url("dogg.png");
+        background-size: cover;
+     }
+     .buttons.cat
+     {
+        background-image: url("cat.png");
+        background-size: cover;
+          
+     }
+    th {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .friend
+    {
+        font-size: 33px;
+        font-weight: bolder;
+        font-family:monospace;
+        color: white;
+        text-shadow: 2px 2px rgb(51, 49, 49);
+        -webkit-text-stroke: 0.05px black;
+    }
+    form{
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+    }
+    .pets{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        font-size: 30px;
+        flex-wrap: wrap;
+        column-gap: 150px;
+        padding: 0.5px;
+    } 
+    .site-footer {
+        background-color: #6504b5;
+          text-align: center;
+          margin: 10px 0;
+      }
+      
+      /*Social Media Icons*/
+      .social-wrapper {
+          text-align: center;
+      }
+      
+      .social-wrapper ul li {
+          display: inline;
+          margin: 0 5px;
+          padding: 10px; /*spacing between icons*/
+      }
+      
+      .twitter-icon,
+      .facebook-icon,
+      .instagram-icon,
+      .youtube-icon{
+          margin-top: .625em;
+          width: 40px;
+          height: 40px; /* For IE8 and earlier */
+        border-radius: 25px;
+      }
+      .footer-nav p {
+          text-align: center;
+      }
+      .header
+      {
+        padding: 5px; 
+        width:100% ;
+         height:100%;
+         background-color:#efeef1; 
+        display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items:space-between;
+      }
+    </style>
+    <body>
+        <header class="header">
+            <p class="left_header_adopt"> &nbsp &nbsp &nbsp Adopt</p>
+           <button class="btn heart">
+                <a href="favourites.php"><img src="heart.png"></a>
+           </button> 
+           <div class="dropdown"> <button class="dropbtn">
+            </button>
+            <div class="dropdown-content">
+                <a href="Uploads_Bought.php">My Animals</a>
+                <a href="Account.php">Account</a>
+                <a href="Setting.php">Setting</a>
+                </div>
+            </div>
+        </header>
+            <!--<div class="adj_header">
+                <button class="heart">
+            <img src="heart1.png"  width="42" height="40">
+                </button><!-- <img src="menu-bar.png" width="27" height="23">
+           <button class="adj_header dropbtn ">
+              </button>
+              <div class="adj_header-content">
+                <a href="#">My Animals</a>
+                <a href="#">Account</a>
+                <a href="#">Social Media</a>
+            </div>
+        </div>-->
+        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav-->
+        <div class="search">
+            <center>
+             <form action="result.php" method="post">
+                 <input type="text"
+                     placeholder=" Search Dogs, Cats, Turtles.."
+                     name="search">
+                <button class="butt">
+                 </button>
+             </form>
+             <p class="friend" style="margin-bottom: 0.01%">
+                Choose your new <br>friend!
+            <p class="friend" style="font-size:150%;margin-bottom: 1%;">Browse in shelters over 150 pet available<br>
+            </p>
+        </p>  
+             </center>
+         </div><center>
+            <button class="buttons cat">
+            </button>
+            <button class="buttons dog"></button>
+            <article class="pets"><p>Cats</p><p> Dogs </p></article>
+        </center>
+         <div style="border: dotted 6px;"> <center>
+            <img src="tyler.jpg" height="15%" width="15%">
+            <img src="tyler.jpg" height="15%" width="15%">
+            <img src="tyler.jpg" height="15%" width="15%">
+            <img src="tyler.jpg" height="15%" width="15%">
+            <img src="tyler.jpg" height="15%" width="15%">
+            <img src="tyler.jpg" height="15%" width="15%">
+            
+        </center>
+         </div>
+         <footer id="colophon" class="site-footer">
+            <div class="social-wrapper">
+              <ul>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          </footer>
+    </body>
+</html>
