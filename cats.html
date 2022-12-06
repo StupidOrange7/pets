@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="main.css">
+<style>
+    .wrapper
+    {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1px;
+    border: none;
+    width: min(95%,70cm);
+    margin-inline: auto;
+    gap: 2em;
+    }
+    .button
+    {
+        height: 19em;
+        width: 17em;
+        border-radius: 2em;
+        overflow: hidden;
+    }
+    .button .img{
+        height: 70%;
+        width: auto;
+        display: block;
+        position:relative;
+        left: 5%;
+    }
+    .button:hover{
+        background-color: rgb(144, 138, 144);
+    }
+</style>
+<body>
+    <header class="header" style="background-color: white;">
+        <p class="left_header_adopt"> &nbsp &nbsp &nbsp Adopt</p>
+       <button class="btn heart">
+            <a href="favourites.php"><img src="heart1.png" height="35px" width="35px"></a>
+       </button> 
+       <div class="dropdown"> <button class="dropbtn">
+        </button>
+        <div class="dropdown-content">
+            <a href="Uploads_Bought.php">My Animals</a>
+            <a href="Account.php">Account</a>
+            <a href="Setting.php">Setting</a>
+            </div>
+        </div>
+    </header>
+    <center>
+        <div style="background-color: #efeef1;height: 100vh;">
+        <ul  class="wrapper">
+             <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button>
+             <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button>
+        </ul>
+    </div>
+</body>
+<footer id="colophon" class="site-footer">
+    <div class="social-wrapper">
+      <ul>
+        <li>
+          <a href="#" target="_blank">
+            <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
+        </li>
+      </ul>
+    </div>
+</center>
+  </footer>
+</html>

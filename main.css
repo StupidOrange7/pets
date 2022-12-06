@@ -1,0 +1,138 @@
+.header
+{
+  padding: 3px; 
+  width:100% ;
+   height:100%;
+  display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items:space-between;
+   font-size: large;
+}
+.right_header
+{
+    padding-right: 0.5cm;
+}
+.left_header_adopt
+{
+    
+font-family:ink free;
+color: #6504b5;
+font-size: larger;
+display: inline;
+font-weight:bold;
+}
+/* styling search bar */
+.search input[type=text]{
+width: 100%;
+height: 50px;
+border-radius: 25px;
+border: 2px solid #6504b5;
+}
+.search{
+    background-color:#6504b5;
+    background-image: url("https://www.petfinder.com/sites/default/files/styles/hero_image_667_235/public/images/content/667%20hero_0.jpg?itok=mwPI7hr1");
+    background-size: 100%;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 7%;
+}
+.butt {
+    background-image: url("search-icon.png");
+    background-size: cover;
+    height:50px;
+    width:50px;   
+ }
+.btn {
+    border: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 12px 16px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+  }
+  .btn .heart
+  {
+    display: inline;
+    position: absolute;
+    left: 110px;
+  }
+    .heart
+{
+    display: inline;
+    border: none;
+    content: 300px;
+    padding: 0px 22px;
+    top:27px;
+    cursor: pointer;
+}
+.dropbtn {
+    background-image: url("menu-bar.png");
+    height: 27px;
+    width: 27px;
+    border: none;
+  }
+  
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    top:20px;
+    right:16px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin:0px ;
+    right: 0px;
+    top: 40px;
+    z-index: 1000;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: flex;
+    flex: column;
+    justify-items: end;
+    
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .site-footer {
+    background-color: #6504b5;
+      text-align: center;
+      margin: 10px 0;
+  }
+  
+  /*Social Media Icons*/
+  .social-wrapper {
+      text-align: center;
+  }
+  
+  .social-wrapper ul li {
+      display: inline;
+      margin: 0 5px;
+      padding: 10px; /*spacing between icons*/
+  }
+  
+  .twitter-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .youtube-icon{
+      margin-top: .625em;
+      width: 40px;
+      height: 40px; /* For IE8 and earlier */
+    border-radius: 25px;
+  }
+  .footer-nav p {
+      text-align: center;
+  }
