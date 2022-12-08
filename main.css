@@ -1,4 +1,4 @@
-.header
+header
 {
   padding: 3px; 
   width:100% ;
@@ -15,7 +15,7 @@
 }
 .left_header_adopt
 {
-    
+text-decoration: none;
 font-family:ink free;
 color: #6504b5;
 font-size: larger;
@@ -45,7 +45,6 @@ border: 2px solid #6504b5;
  }
 .btn {
     border: none;
-    background-repeat: no-repeat;
     display: inline-block;
     padding: 12px 16px;
     position: absolute;

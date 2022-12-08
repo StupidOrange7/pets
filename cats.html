@@ -2,16 +2,34 @@
 <html>
 <link rel="stylesheet" href="main.css">
 <style>
-    .wrapper
-    {  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1px;
-    border: none;
-    width: min(95%,70cm);
-    margin-inline: auto;
-    gap: 2em;
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 45%);
+        grid-gap: 30px 10px;
+        position: relative;
+        top: 20px;
+        justify-content: center;
+        }
+     /*   .wrapper{
+        display: grid;
+        grid-auto-columns: repeat(auto-fit,45%);
+        grid-gap: 0px 100px;
+        justify-content: center;
+        grid-auto-flow: column;
+    }*/
+    .inner_button{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 3px;
+        height: 2em;
+        width: 5em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        position: relative;
+        top:5%;
     }
+    .inner_button:hover{background-color: green;}
     .button
     {
         height: 19em;
@@ -29,14 +47,15 @@
     .button:hover{
         background-color: rgb(144, 138, 144);
     }
+    .button:active{background-color: green; opacity: 0.5; transition-duration: 0s 100s;}
 </style>
-<body>
+<body  style="background-color: #efeef1;">
     <header class="header" style="background-color: white;">
         <p class="left_header_adopt"> &nbsp &nbsp &nbsp Adopt</p>
-       <button class="btn heart">
+       <button class="btn heart" style="background-color: white;">
             <a href="favourites.php"><img src="heart1.png" height="35px" width="35px"></a>
        </button> 
-       <div class="dropdown"> <button class="dropbtn">
+       <div class="dropdown" style="background-color: white;"> <button class="dropbtn">
         </button>
         <div class="dropdown-content">
             <a href="Uploads_Bought.php">My Animals</a>
@@ -46,14 +65,19 @@
         </div>
     </header>
     <center>
-        <div style="background-color: #efeef1;height: 100vh;">
-        <ul  class="wrapper">
-             <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button>
-             <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button>
-        </ul>
+        <div>
+        <div class="wrapper">
+            <div> <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div> <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div><button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div><button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div><button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div><button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            <div> <button class="button"><img src="tyler.jpg" class="button img"><p> Up for adoption</p></button><button class="inner_button">Get</button></div>
+            </div>
     </div>
 </body>
-<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-footer" style="position: relative; top: 50px;px;">
     <div class="social-wrapper">
       <ul>
         <li>
