@@ -8,7 +8,17 @@ header
   align-items:space-between;
   font-size: large;
 }
-a{text-decoration: none;}
+.link
+{
+  font-family: cursive;
+  color: #6504b5;
+  font-size: large;
+  display: inline;
+  font-weight:bold;
+  top:10px;
+  right: 5px;
+  position: relative;
+}
 .right_header
 {
     padding-right: 0.5cm;
@@ -22,18 +32,9 @@ font-size: larger;
 display: inline;
 font-weight:bold;
 }
-b{
-  font-family: cursive;
-  color: #6504b5;
-  font-size: large;
-  display: inline;
-  font-weight:bold;
-  top:20px;
-  position: relative;
-
-}
   .btn .heart
   {
+    background-image: url("heart11.png");
     display: inline;
   }
     .heart
@@ -43,7 +44,8 @@ b{
     border: none;
     content: 300px;
     padding: 0px 22px;
-    top:27px;
+    right: 55px;
+    top: 27px;
     position: absolute;
     cursor: pointer;
 }
@@ -59,6 +61,7 @@ a{
     border: none;
     position: relative;
     top: 4px;
+    cursor:progress;
   }
 
 .dropdown {

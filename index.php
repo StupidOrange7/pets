@@ -10,8 +10,8 @@ require_once('aids/Config.php') ;
             <p class="left_header_adopt"> <a href="index.php">&nbsp &nbsp &nbsp Adopt</a></p>
             <?php
           $username = $_SESSION['username'];
-          if($_SESSION['username']==null)
-          { ?> <button class="btn heart" style="position:aboslute; right:120px;">
+          if($_SESSION['username']!=null)
+          { ?> <button class="btn heart">
                 <a href="favourites.php"><img src="heart1.png" width="35px"></a>
            </button> 
           
@@ -28,9 +28,9 @@ require_once('aids/Config.php') ;
             else
             {
                 ?>
-                <div>
-               <button style="border:none; cursor:pointer;"> <b href="SignUp.html">Sign Up </b></button>
-               <button style="border:none;cursor:pointer;"><b href="SignIn.html">Login</b></button>
+                <div class="link">
+                <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>
+                <a href="SignIn.php"><button style="border:none;cursor:pointer;"><p class="link">Login</button></p></a>
                 </div>
                 <?php
             }
