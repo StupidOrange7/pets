@@ -1,0 +1,66 @@
+   
+     /* styling search bar */
+.search input[type=text]{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #6504b5;
+    }
+    .search{
+        background-color:#6504b5;
+        background-image: url("background.jpg");
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        padding: 7%;
+    }
+
+    .butt {
+        background-color: transparent;
+        border: none;
+        height:50px;
+        width:50px;   
+     }
+    .buttons
+     {
+        margin: 3em;
+        width: 120px;
+        height: 120px;
+     }
+     .buttons.dog
+     {
+        cursor: pointer;
+        background-image: url("dogg.png");
+        background-size: cover;
+     }
+     .buttons.cat
+     {
+        cursor: pointer;
+        background-image: url("cat.png");
+        background-size: cover;
+          
+     }
+    .friend
+    {
+        font-size: 33px;
+        font-weight: bolder;
+        font-family:monospace;
+        color: white;
+        text-shadow: 2px 2px rgb(51, 49, 49);
+        -webkit-text-stroke: 0.05px black;
+    }
+    form{
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+    }
+    .pets{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        font-size: 30px;
+        flex-wrap: wrap;
+        column-gap: 150px;
+        padding: 0.5px;
+    }

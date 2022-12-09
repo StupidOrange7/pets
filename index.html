@@ -11,6 +11,7 @@
      }
      .buttons.dog
      {
+        cursor: po;
         background-image: url("dogg.png");
         background-size: cover;
      }
@@ -85,7 +86,7 @@
         <header class="header" style="background-color:#efeef1; ">
             <p class="left_header_adopt"> &nbsp &nbsp &nbsp Adopt</p>
            <button class="btn heart">
-                <a href="favourites.php"><img src="heart.png"></a>
+                <a href="favourites.php"><img src="heart1.png" width="35px"></a>
            </button> 
            <div class="dropdown"> <button class="dropbtn">
             </button>
@@ -101,9 +102,10 @@
             <center>
              <form action="result.php" method="post">
                  <input type="text"
-                     placeholder=" Search Dogs, Cats, Turtles.."
+                     placeholder="      Search Dogs, Cats"
                      name="search">
-                <button class="butt">
+                <button class="butt" type="submit" formaction="result.php">
+                    <img src="search.png" width="60px">
                  </button>
              </form>
              <p class="friend" style="margin-bottom: 0.01%">
@@ -113,9 +115,10 @@
         </p>  
              </center>
          </div><center>
+            <a href="cats.php">
             <button class="buttons cat">
-            </button>
-            <button class="buttons dog"></button>
+            </button></a>
+            <a href="dogs.php"><button class="buttons dog"></button> </a>
             <article class="pets"><p>Cats</p><p> Dogs </p></article>
         </center>
          <div style="border: dotted 6px;"> <center>
