@@ -1,3 +1,23 @@
+
+<?php
+session_start();
+require 'Config.php';
+require 'UserFunctions.php';
+if(checkLogin())
+	header("LOCATION: index.php");
+
+if(count($_POST)>0)
+{
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+
+	if(login($email,$password))
+		header("LOCATION: index.php");
+	else
+    header("LOCATION: SignIn.php");
+		echo 'invalid login data';
+}
+?>
 <!DOCTYPE html>
 <html>
 <header class="header" style="background-color:#efeef1; ">
@@ -14,13 +34,15 @@
 	<center>
 		<div class="main">  	
 			<div class="signup">
-				<form>
+				<form  method="POST">
 					<label>Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button class="buttonn">Login</button>
-					<button class="buttonn"><a href="SignUp.html"></a>Sign up</button>
+					<input type="password" name="password" placeholder="Password" required="">
+					<input class="buttonn" type="submit" value="Login" onclick="fun()"></button>
+					<button class="buttonn"type="submit" value="Sign Up" onclick="fun2()"></button>
 				</form>
+				<script>function fun(){window.location.href = "";}
+				function fun2(){window.location.href = "";}</script>
 			</div>
 		</div>
 		</center>

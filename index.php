@@ -2,31 +2,31 @@
 <html>
 <?php
 session_start();
-require_once('aids/Config.php') ;
+require_once('Config.php') ;
 ?>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="index.css">
       <header class="header" style="background-color:#efeef1; ">
             <p class="left_header_adopt"> <a href="index.php">&nbsp &nbsp &nbsp Adopt</a></p>
             <?php
-          $username = $_SESSION['username'];
-          if($_SESSION['username']!=null)
-          { ?> <button class="btn heart">
+            $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+          if($email!='')
+          {?> <button class="btn heart">
                 <a href="favourites.php"><img src="heart1.png" width="35px"></a>
-           </button> 
-          
+           </button>
           <div class="dropdown"> <button class="dropbtn">
             </button>
             <div class="dropdown-content">
                 <a href="Uploads_Bought.php">My Animals</a>
                 <a href="Account.php">Account</a>
                 <a href="Setting.php">Setting</a>
+                <a href="logout.php">Logout</a>
                 </div>
             </div>
             <?php 
           }
             else
-            {
+            {;
                 ?>
                 <div class="link">
                 <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>

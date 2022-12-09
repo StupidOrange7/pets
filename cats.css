@@ -1,0 +1,46 @@
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 42%);
+        grid-gap: 30px 10px;
+        position: relative;
+        top: 20px;
+        justify-content: center;
+        }
+    
+    .inner_button{
+        display: grid;
+        grid-row-start: auto;
+        margin: auto;
+        height: 2em;
+        width: 5em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        position: relative;
+        top:5px;
+        bottom: 20px;
+    }
+    .inner_button:hover{background-color: green;}
+    .inner_button1{
+
+    }
+    .inner_button1:hover{background-color: red;}
+    .button
+    {
+        height: 19em;
+        width: 17em;
+        border-radius: 2em;
+        overflow: hidden;
+    }
+    .button .img{
+        height: 70%;
+        width: auto;
+        display: block;
+        position:relative;
+        left: 5%;
+    }
+    .button:hover{
+        background-color: rgb(144, 138, 144);
+    }
+    .button:active{background-color: rgb(24, 25, 24); opacity: 0.5; transition-duration: 0s 100s;}
