@@ -1,16 +1,15 @@
 <?php 
-//require "Includes/Config.php";
+function cat()
+{
+
+}
 function login($email,$password)
 {
-//	echo "the email is : ".$email;
-//	echo "the pass is : ".$password;
     $connection  = mysqli_connect(SERVER,DBUSER,DBPASS,DBNAME);
 	if (!$connection) {
 		echo "Error connecting to MySQL: ".mysqli_connect_error();
 		die; 
 	}
-	//$query = mysqli_query($connection,"SELECT * FROM user WHERE 'email'= '$email' AND 'password'='$password'");
-//	echo "<br>the fname is: ".$query;
 	$query = mysqli_query ($connection, "Select * from info where email = '$email' AND password = '$password' ");
 	//echo $query;
 	$res = mysqli_fetch_array($query); //,MYSQLI_NUM
