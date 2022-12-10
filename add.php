@@ -12,7 +12,7 @@ $sql = "INSERT INTO info(fname, lname, email, password, age, address) VALUES ('$
 if (! mysqli_query($con, $sql))
 {
     $msg= 'error adding new user';
-  header("Location: SignUp.php?$msg");
+  header("Location: SignUp.php,$msg");
 }
 else
   header("Location: index.php");

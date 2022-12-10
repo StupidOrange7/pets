@@ -20,3 +20,4 @@ require_once('aids/Config.php') ;
                 </div>
             </div>
         </header>
+        <footer><?php include 'footer.html';?></footer>

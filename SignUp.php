@@ -14,7 +14,7 @@ session_start();
 <link rel="stylesheet"  href="SignIn.css">
 <link rel="stylesheet" href="main.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-<body style="background-color:#c5b5e2">
+<body style="background-color:#c5b5e2" onunload="return myFunction()">
 	<center>
 		<div class="main" style="height: 600px;">  	
 			<div class="signup">
@@ -29,26 +29,16 @@ session_start();
 					<button class="buttonn" type="submit" value="Sign up"></button>
 				</form>
         
+        <script>
+            function myFunction() {
+            return "Are you sure you want to close the site?";
+            }
+        </script>
 			</div>
 		</div>
 		</center>
-		<footer id="colophon" class="site-footer" style="position: relative; top:100px;">
-            <div class="social-wrapper">
-              <ul>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
-                </li>
-              </ul>
-            </div>
-          </footer>
+    <footer>
+      <?php include 'footer.html';?>
+    </footer>
     </body>
 </html>

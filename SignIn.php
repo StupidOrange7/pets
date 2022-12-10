@@ -14,8 +14,10 @@ if(count($_POST)>0)
 	if(login($email,$password))
 		header("LOCATION: index.php");
 	else
-    header("LOCATION: SignIn.php");
-		echo 'invalid login data';
+	{
+		$msg = 'invalid login data';
+    header("LOCATION: SignIn.php".$msg);}
+		
 }
 ?>
 <!DOCTYPE html>
@@ -38,31 +40,13 @@ if(count($_POST)>0)
 					<label>Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="password" placeholder="Password" required="">
-					<input class="buttonn" type="submit" value="Login" onclick="fun()"></button>
-					<button class="buttonn"type="submit" value="Sign Up" onclick="fun2()"></button>
+					<input class="buttonn" type="submit" value="Login" onclick="fun()">
+					<input class="buttonn" type="submit" value="Sign Up" onclick="fun2()">
 				</form>
-				<script>function fun(){window.location.href = "";}
-				function fun2(){window.location.href = "";}</script>
+				<script>function fun(){window.location.href = "SignIn.php";}
+				function fun2(){window.location.href = "SignUp.php";}</script>
 			</div>
 		</div>
-		</center>
-		<footer id="colophon" class="site-footer" style="position: relative; top:100px;">
-            <div class="social-wrapper">
-              <ul>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
-                </li>
-              </ul>
-            </div>
-          </footer>
-    </body>
+		</center> </body>
+		<footer><?php include 'footer.html';?></footer>
 </html>
