@@ -1,8 +1,4 @@
 <?php 
-function cat()
-{
-
-}
 function login($email,$password)
 {
     $connection  = mysqli_connect(SERVER,DBUSER,DBPASS,DBNAME);
@@ -26,7 +22,6 @@ function login($email,$password)
 		$_SESSION["password"] = $res['password'];
 		$_SESSION["age"] = $res['age'];
 		$_SESSION["lname"] = $res['lname'];
-
 		return true;
 		}
 	}
