@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <header class="header" style="background-color:#efeef1; ">
@@ -18,16 +15,20 @@ session_start();
 	<center>
 		<div class="main" style="height: 600px;">  	
 			<div class="signup">
-				<form action="add.php" method="post" >
-					<label style="font-weight: bold;">Sign Up</label>
-					<input type="text" name="fname" placeholder="First Name" required="">
-					<input type="text" name="lname" placeholder="Last Name" required="">
-					<input type="text" name="address" placeholder="Address" required="">
-					<input type="number" name="age" placeholder="Age" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="password" placeholder="Password" required="">
-					<input type="file" name="image" placeholder="image">
-					<button class="buttonn" type="submit" value="Sign up"></button>
+				<form action="addAnimals.php" method="post" >
+					<label style="font-weight: bold;">Upload Your pet Now!</label>
+					<input type="text" name="name" placeholder="Name of your pet" required="">
+					<input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female
+					<input type="number" name="price" placeholder="Is your pet up for adoption or is it being sold?" required="">
+                    <input type="file" name="image" placeholder="image">
+					<input type="number" name="month" placeholder="how old is your pet? IN MONTHS" required="">
+                    <select name="type">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="fish">Fish</option>
+                        <option value="turtle">Turtle</option>
+                    </select>
+					<button class="buttonn" type="submit" value="Upload"></button>
 				</form>
         
         <script>

@@ -13,6 +13,7 @@
                 <a href="logout.php">Logout</a>
                 </div>
             </div>
+            <div><button><a href="Upload.php">Upload</a></button></div>
             <?php 
           }
             else

@@ -22,6 +22,7 @@ function login($email,$password)
 		$_SESSION["password"] = $res['password'];
 		$_SESSION["age"] = $res['age'];
 		$_SESSION["lname"] = $res['lname'];
+		$_SESSION["image"] = $res['image'];
 		return true;
 		}
 	}

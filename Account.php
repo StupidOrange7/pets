@@ -18,6 +18,8 @@ require_once('Config.php') ;
             <label style="font-size: large;">Address:<p style="font-size: medium;"> <?php echo $_SESSION["address"];?></p></label>
             
             <label style="font-size: large;">Email: <p style="font-size: medium;"><?php echo $_SESSION["email"];?></p></label>
+
+            <label style="font-size: large;">Email: <p style="font-size: medium;"><img src="<?php echo $_SESSION["image"]?>"></p></label>
             </center></div>
         </body>
         <footer><?php include 'footer.html';?></footer>

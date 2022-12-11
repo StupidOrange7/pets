@@ -3,8 +3,6 @@
 session_start();
 require 'Config.php';
 require 'UserFunctions.php';
-if(checkLogin())
-	header("LOCATION: index.php");
 
 if(count($_POST)>0)
 {
@@ -16,7 +14,7 @@ if(count($_POST)>0)
 	else
 	{
 		$msg = 'invalid login data';
-    header("LOCATION: SignIn.php".$msg);}
+    header("LOCATION: SignIn.php");}
 		
 }
 ?>
