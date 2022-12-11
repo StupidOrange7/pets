@@ -60,7 +60,7 @@
         echo "Error creating Table: ".$con->error."<br>";
     } if($con->query($sqlp)===TRUE)
     {
-        echo "Tables modified successfully <br>";
+        echo "Tables modified successfully <br>" ;
     }
     else
     {
