@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-<header class="header" style="background-color:#efeef1; ">
-            <p class="left_header_adopt"> <a href="index.php">&nbsp &nbsp &nbsp Adopt</a></p>
-                <div class="link">
-                <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>
-                <a href="SignIn.php"><button style="border:none;cursor:pointer;"><p class="link">Login</button></p></a>
-                </div>
-        </header>
-	
+<?php
+session_start();
+require_once('Config.php') ;
+?>
 <link rel="stylesheet"  href="SignIn.css">
 <link rel="stylesheet" href="main.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<header class="header" style="background-color:#efeef1; ">
+    <?php include 'header.php';?>
 <body style="background-color:#c5b5e2" onunload="return myFunction()">
 	<center>
 		<div class="main" style="height: 600px;">  	

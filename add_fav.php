@@ -1,3 +1,6 @@
-<?php 
-echo animal_email
+<?php
+session_start();
+require_once('Config.php') ;
+include ("conn.php");
+ 
 ?>

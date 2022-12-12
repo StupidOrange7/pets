@@ -3,7 +3,7 @@
             $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
           if($email!='')
           {echo $email;?> <button class="btn heart">
-                <a href="favourites.php"><img src="heart1.png" width="35px"></a>
+                <a href="favourites.php"><img src="heart11.png" width="35px"></a>
            </button>
           <div class="dropdown"> <button class="dropbtn">
             </button>

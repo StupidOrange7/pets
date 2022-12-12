@@ -20,7 +20,7 @@ require_once('Config.php') ;
               echo "Error connecting to MySQL: ".mysqli_connect_error();
               die; 
             }
-          $sql = "SELECT id,name,gender,price,image,age,type FROM animals";
+          $sql = "SELECT id,name,gender,price,image,age,type,email_ani FROM animals";
           $result = $connection->query($sql);
           
           if ($result->num_rows > 0) {

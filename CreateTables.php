@@ -18,9 +18,8 @@
         price INT(3),
         image MEDIUMBLOB,
         age INT (2) NOT NULL,
-        email VARCHAR(40),
-        KEY 'email_animal'('email'),
-        CONSTRAINT 'email_animal' FOREIGN KEY ('email') REFERENCES 'info'('email')) ON DELETE CASCADE";
+        type VARCHAR(10) NOT NULL,
+        email_ani VARCHAR(40))";
 
     $sqli = "CREATE TABLE info (
         fname VARCHAR(25) NOT NULL,
@@ -31,11 +30,9 @@
         password VARCHAR(20),
         image blob NOT NULL
         )";
-    
-    $sqlm = "ALTER TABLE animals DROP FOREIGN KEY 'email_animal'";
-    $sqlp = "ALTER TABLE animals ADD CONSTRAINT 'email_animal';"; 
-            
-    $sqlo = "           FOREIGN KEY (email_ani) REFERENCES 'info' ('email') ON DELETE CASCADE;";
+
+    $sqlm = "ALTER TABLE `animals` ADD FOREIGN KEY (`email_ani`) REFERENCES `info`(`email`) ON DELETE RESTRICT ON UPDATE RESTRICT";
+
     if($con->query($sqla)===TRUE)
     {
         echo "Tables created successfully <br>";
@@ -51,23 +48,10 @@
     else
     {
         echo "Error creating Table: ".$con->error."<br>";
-    } if($con->query($sqlm)===TRUE)
+    } 
+    if($con->query($sqlm)===TRUE)
     {
-        echo "Tables modified successfully <br>";
-    }
-    else
-    {
-        echo "Error creating Table: ".$con->error."<br>";
-    } if($con->query($sqlp)===TRUE)
-    {
-        echo "Tables modified successfully <br>" ;
-    }
-    else
-    {
-        echo "Error creating Table: ".$con->error."<br>";
-    } if($con->query($sqlo)===TRUE)
-    {
-        echo "Tables modified successfully <br>";
+        echo "Tables modfied successfully <br>";
     }
     else
     {
