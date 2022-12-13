@@ -82,8 +82,7 @@ require_once('Config.php');
                 die;
             }
             $email = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
-            echo $email;
-            $sql = "SELECT name,gender,price,image,age,type FROM animals,favorite WHERE  email_fav='$email' AND id_fav=id";
+            $sql = "SELECT name,gender,price,image,age,type FROM animals WHERE email_ani LIKE '$email'";
             $result = $connection->query($sql);
 
             if ($result->num_rows > 0 ) {

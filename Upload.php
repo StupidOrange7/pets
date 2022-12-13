@@ -19,7 +19,7 @@ require_once('Config.php') ;
 					<input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female
 					<input type="number" name="price" placeholder="Is your pet up for adoption or is it being sold?" required="">
                     <input type="file" name="image" placeholder="image">
-					<input type="number" name="month" placeholder="how old is your pet? IN MONTHS" required="">
+					<input type="number" name="month" placeholder="how old is your pet? IN MONTHS">
                     <select name="type">
                         <option value="cat">Cat</option>
                         <option value="dog">Dog</option>

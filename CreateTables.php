@@ -31,6 +31,14 @@
         image blob NOT NULL
         )";
 
+    $sqlf =" CREATE TABLE favorite(
+        email_fav VARCHAR(40) NOT NULL,
+        id_fav INT NOT NULL,
+        PRIMARY KEY(email_fav,id_fav),
+        FOREIGN KEY (email_fav) REFERENCES info (email) ON DELETE RESTRICT ON UPDATE RESTRICT,
+        FOREIGN KEY (id_fav) REFERENCES animals (id) ON DELETE RESTRICT ON UPDATE RESTRICT
+    )";
+
     $sqlm = "ALTER TABLE `animals` ADD FOREIGN KEY (`email_ani`) REFERENCES `info`(`email`) ON DELETE RESTRICT ON UPDATE RESTRICT";
 
     if($con->query($sqla)===TRUE)
@@ -52,6 +60,14 @@
     if($con->query($sqlm)===TRUE)
     {
         echo "Tables modfied successfully <br>";
+    }
+    else
+    {
+        echo "Error creating Table: ".$con->error."<br>";
+    }
+    if($con->query($sqlf)===TRUE)
+    {
+        echo "Tables created successfully <br>";
     }
     else
     {

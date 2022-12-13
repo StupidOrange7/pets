@@ -11,11 +11,14 @@ $type = isset($_POST['type']) ? $_POST['type'] : '';
 $email = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
 
 $sql = "INSERT INTO animals(name,gender,price,image,age,type,email_ani) VALUES ('$name','$gender','$price','$image','$month','$type','$email');";
-if (! mysqli_query($con, $sql))
+if (!mysqli_query($con, $sql)||$name==''||$price==''||$image==''||$month==''||$type==''||$email==''||$gender=='')
 {
-    $msg= 'error adding new animal';
-    header("Location: Upload.php");
+    header("Location: error_adding_animal.php");
+    exit;
 }
 else
-  header("Location: indexx.php");
+  {
+    header("Location: index.php");
+    exit;
+  }
 ?>

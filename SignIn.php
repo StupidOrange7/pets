@@ -21,7 +21,7 @@ if(count($_POST)>0)
 <!DOCTYPE html>
 <html>
 <header class="header" style="background-color:#efeef1; ">
-            <p class="left_header_adopt"> <a href="index.php">&nbsp &nbsp &nbsp Adopt</a></p>
+            <p class="left_header_adopt"> <a href="index.php"><img src="logoo.png" width="130" height="100"></a></p>
                 <div class="link">
                 <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>
                 <a href="SignIn.php"><button style="border:none;cursor:pointer;"><p class="link">Login</button></p></a>

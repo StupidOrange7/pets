@@ -10,11 +10,14 @@ $address = isset($_POST['address']) ? $_POST['address'] : '';
 $image = isset($_POST['image']) ? $_POST['image'] : '';
 
 $sql = "INSERT INTO info(fname, lname, email, password, age, address, image) VALUES ('$fname','$lname','$email','$password','$age','$address','$image');";
-if (! mysqli_query($con, $sql))
+if (! mysqli_query($con, $sql)||$fname==''||$lname==''||$email==''||$age==''||$password==''||$address==''||$image=='')
 {
-    $msg= 'error adding new user';
-  header("Location: SignUp.php,$msg");
+  header("Location: error_adding_user.php");
+  exit;
 }
 else
-  header("Location: indexx.php");
+{
+  header("Location: index.php");
+  exit;
+}
 ?>

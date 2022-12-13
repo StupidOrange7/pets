@@ -30,8 +30,13 @@ require_once('Config.php');
               <?php } else {
                 echo $row["price"];
               } ?></button>
-            <button id=application class="inner_button" onclick="location.href='application.php'">Get</button>
-            <button id=favorite class="inner_button" onclick="location.href='add_fav.php'">Favourite</button>
+
+<form method="post" action="">
+        <input type="submit" name="action" value="Edit"/>
+        <input type="submit" name="action" value="Update"/>
+        <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
+      </form>
+      
           </div>
       <?php }
       } else
