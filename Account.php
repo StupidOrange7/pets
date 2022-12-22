@@ -46,9 +46,9 @@ if ($email != '') {
 
   <div>
     <center><br><br><br>
-        <img src="images/Daisy.jpeg" height="100" width="100"></p>
+        <img class="pic" src="images/Daisy.jpeg" height="150" width="150"></p>
       
-    <form class="form-style-7">
+    <form class="form-style-7" action="update.php" method="post">
 <ul>
 <li>
     <label for="name">Name</label>
@@ -66,6 +66,7 @@ if ($email != '') {
 <li>
 
 </ul>
+<a style="text-decoration: none;" href="update.php"><img src="update_button.png" height="40" width="85"></a>
 </form>
 <!--
       

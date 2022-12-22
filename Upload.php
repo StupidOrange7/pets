@@ -4,29 +4,32 @@
 session_start();
 require_once('Config.php') ;
 ?>
+
 <link rel="stylesheet"  href="SignIn.css">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="trial.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <header class="header" style="background-color:#efeef1; ">
     <?php include 'header.php';?>
+</header>
 <body style="background-color:#c5b5e2" onunload="return myFunction()">
 	<center>
-		<div class="main" style="height: 600px;">  	
+		<div class="main" style="height: auto;">  	
 			<div class="signup">
 				<form action="addAnimals.php" method="post" >
 					<label style="font-weight: bold;">Upload Your pet Now!</label>
 					<input type="text" name="name" placeholder="Name of your pet" required="">
-					<input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female
-					<input type="number" name="price" placeholder="Is your pet up for adoption or is it being sold?" required="">
+					<span><input style="float:left;position: relative;right:30px;" type="radio" name="gender" value="Male"><span style="float: left;position: relative;right: 147px;top: 21px;font-family: system-ui;">Male</span>
+                    <input style="float:left;position: relative;left:118px;bottom: 60px;" type="radio" name="gender" value="Female"><span style="position: relative;right: 98px;top: 21px;font-family: system-ui;">Female</span>
+					</span><input type="number" name="price" placeholder="Is your pet up for adoption or is it being sold?" required="">
                     <input type="file" name="image" placeholder="image">
 					<input type="number" name="month" placeholder="how old is your pet? IN MONTHS">
-                    <select name="type">
+                    Type&nbsp;&nbsp;&nbsp;&nbsp;<select name="type">
                         <option value="cat">Cat</option>
                         <option value="dog">Dog</option>
                         <option value="fish">Fish</option>
                         <option value="turtle">Turtle</option>
                     </select>
-					<button class="buttonn" type="submit" value="Upload"></button>
+					<a class="button_submit" style="width: 40%;" href="MyAnimals.php"> <span class="button_submit" style="position: relative; height: 2px;top:8px;width: 40%;font: system-ui;">Upload</span></a>
 				</form>
         
         <script>
