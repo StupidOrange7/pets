@@ -30,13 +30,13 @@
      .buttons.dog
      {
         cursor: pointer;
-        background-image: url("dogg.png");
+        background-image: url("images/dogg.png");
         background-size: cover;
      }
      .buttons.cat
      {
         cursor: pointer;
-        background-image: url("cat.png");
+        background-image: url("images/cat.png");
         background-size: cover;
           
      }

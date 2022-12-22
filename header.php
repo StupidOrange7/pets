@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="main.css">
-<p class="left_header_adopt"> <a href="index.php"><img src="logoo.png" width="130" height="100"></a></p>
+<link rel="stylesheet" href="trial.css">
+<p class="left_header_adopt"> <a href="index.php"><img src="images/logoo.png" width="90" height="80"></a></p>
 <?php
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 if ($email != '') {
-  echo $email; ?> <button class="btn heart">
-    <a href="favourites.php"><img src="heart11.png" width="35px"></a>
-  </button>
+  echo $email; ?>
   <div class="dropdown"> <button class="dropbtn">
     </button>
     <div class="dropdown-content">
@@ -14,7 +12,12 @@ if ($email != '') {
       <a href="logout.php">Logout</a>
     </div>
   </div>
-  <div><button><a href="Upload.php">Upload</a></button></div>
+   <button class="btn heart">
+     <a href="favourites.php"><img src="images/heart.png" width="35px"></a>
+  </button>
+  <p class="uploadd"> <a href="upload.php"><img src="images/upload.png" width="60" height="60"></a></p>
+
+  <div>
 <?php
 } else {;
 ?>

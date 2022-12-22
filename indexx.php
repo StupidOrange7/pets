@@ -4,10 +4,11 @@
 session_start();
 require_once('Config.php') ;
 ?>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="index.css">
-      <header class="header" style="background-color:#efeef1; ">
+      <header style="background-color:#efeef1; ">
       <?php include 'header.php';?>
+      </header>
       <body>
         <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav-->
         <div class="search">
@@ -17,11 +18,11 @@ require_once('Config.php') ;
                      placeholder="      Search Dogs, Cats"
                      name="search">
                 <button class="butt" type="submit" formaction="result.php">
-                    <img src="search.png" width="60px">
+                    <img src="images/search.png" width="60px">
                  </button>
              </form>
              <p class="friend" style="margin-bottom: 0.01%">
-                Choose your new <br>friend!
+                Choose your new <br>furriend!
             <p class="friend" style="font-size:150%;margin-bottom: 1%;">Browse in shelters over 150 pet available<br>
             </p>
         </p>  
