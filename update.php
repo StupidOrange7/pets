@@ -13,7 +13,7 @@ require_once('Config.php');
 
   <div>
     <center><br><br><br>
-        <img class="pic" src="images/Daisy.jpeg" height="150" width="150"></p>
+        <img class="pic" src= height="150" width="150"></p>
       
     <form class="form-style-7" action="update.php" method="post">
 <ul>

@@ -82,9 +82,9 @@ require_once('Config.php');
                 die;
             }
             $email = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
-            $sql = "SELECT name,gender,price,image,age,type FROM animals WHERE email_ani LIKE '$email'";
+            $sql = "SELECT a_name,a_gender,price,a_image,month,type FROM animals WHERE email_ani LIKE '$email'";
             $result = $connection->query($sql);
-
+            
             if ($result->num_rows > 0 ) {
                 while ($row = $result->fetch_assoc()) {
             ?> <div> <button class="button"><img src="<?php echo $row["image"] ?>" class="button img">

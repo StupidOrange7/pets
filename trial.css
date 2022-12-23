@@ -1,5 +1,5 @@
 header{
-    padding: 30px;
+    padding: 3%;
 }
 .left_header_adopt {
     text-decoration: none;
@@ -10,7 +10,7 @@ header{
 .uploadd {
     float: right;
     position: relative;
-    bottom: 50px;
+    bottom: 55px;
     right: 11px;
 }
 .heart {
@@ -18,7 +18,7 @@ header{
     float: right;
     position: relative;
     cursor: pointer;
-    bottom: 21px;
+    bottom: 26px;
     border: none;
     text-decoration: none;
     right: 12px;
@@ -35,7 +35,7 @@ a{
     background-repeat: no-repeat;
     border: none;
     float: right;
-    bottom: 15px;
+    bottom: 20px;
     position: relative;
 }
 .dropdown-content {
@@ -96,4 +96,7 @@ a{
     color: #6504b5;
     font-family: system-ui;
     font-weight: bolder;
+    float: right;
+    position: relative;
+    bottom: 18px;
 }

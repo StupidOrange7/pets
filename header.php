@@ -22,10 +22,10 @@ if ($email != '') {
 } else {;
 ?>
   <div class="link">
-    <a href="SignUp.php"><button style="border:none; cursor:pointer;">
+    <a href="SignUp.php"><button style="height: 4px;border:none; cursor:pointer;">
         <p class="link"> Sign Up</p>
       </button></a>
-    <a href="SignIn.php"><button style="border:none;cursor:pointer;">
+    <a href="SignIn.php"><button style="height: 4px;border:none;cursor:pointer;">
         <p class="link">Login
       </button></p></a>
   </div>

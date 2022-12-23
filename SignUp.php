@@ -15,7 +15,7 @@ session_start();
         </header>
 <body style="background-color:#c5b5e2" onunload="return myFunction()">
 	<center>
-		<div class="main" style="height: 650px;">  	
+		<div class="main" style="height: 750px;">  	
 			<div class="signup">
 				<form action="add.php" method="post" >
 					<label>Sign Up</label>
