@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="cats.css">
 <?php
 session_start();
 require_once('Config.php');
 ?>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="index.css">
 <header class="header" style="background-color:#efeef1; ">
   <?php include 'header.php'; ?>
@@ -20,7 +19,7 @@ require_once('Config.php');
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
       }
-      $sql = "SELECT id,name,gender,price,image,age,type,email_ani FROM animals";
+      $sql = "SELECT id,name,gender,price,image,age,type,email_ani FROM animals WHERE type = cat"; //EDITED HERE YA SARA FL WHERE
       $result = $connection->query($sql);
 
       if ($result->num_rows > 0) {

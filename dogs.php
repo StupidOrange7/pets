@@ -19,7 +19,7 @@ require_once('Config.php');
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
       }
-      $sql = "SELECT id,name,gender,price,image,age,type,email_ani FROM animals";
+      $sql = "SELECT id,name,gender,price,image,age,type,email_ani FROM animals WHERE type = dog"; //EDITED HERE YA SARA FL WHERE
       $result = $connection->query($sql);
 
       if ($result->num_rows > 0) {
@@ -29,8 +29,13 @@ require_once('Config.php');
               <?php } else {
                 echo $row["price"];
               } ?></button>
-            <button id=application class="inner_button" onclick="location.href='application.php'">Get</button>
-            <button id=favorite class="inner_button" onclick="location.href='add_fav.php'">Favourite</button>
+
+<form method="post" action="">
+        <input type="submit" name="action" value="Edit"/>
+        <input type="submit" name="action" value="Update"/>
+        <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
+      </form>
+      
           </div>
       <?php }
       } else
