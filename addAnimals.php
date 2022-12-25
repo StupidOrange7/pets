@@ -18,7 +18,7 @@ if (!mysqli_query($con, $sql)||$name==''||$price==''||$image==''||$month==''||$t
 }
 else
   {
-    header("Location: index.php");
+    header("Location: home.php");
     exit;
   }
 ?>

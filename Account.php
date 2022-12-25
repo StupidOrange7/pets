@@ -8,7 +8,7 @@ require_once('Config.php');
 <link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="form.css">
 <header class="header" style="background-color:#efeef1;">
-<p class="left_header_adopt"> <a href="index.php"><img src="images/logoo.png" width="90" height="80"></a></p>
+<p class="left_header_adopt"> <a href="home.php"><img src="images/logoo.png" width="90" height="80"></a></p>
 <?php
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 if ($email != '') {

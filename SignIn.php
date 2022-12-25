@@ -10,7 +10,7 @@ if(count($_POST)>0)
 	$password = $_POST['password'];
 
 	if(login($email,$password))
-		header("LOCATION: index.php");
+		header("LOCATION: home.php");
 	else
 	{
 		$msg = 'invalid login data';

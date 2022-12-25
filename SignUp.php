@@ -7,7 +7,7 @@ session_start();
 <link rel="stylesheet" href="main_new.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <header class="header" style="background-color:#efeef1; ">
-            <p class="left_header_adopt"> <a href="index.php"><img src="images/logoo.png" width="130" height="100"></a></p>
+            <p class="left_header_adopt"> <a href="home.php"><img src="images/logoo.png" width="130" height="100"></a></p>
                 <div class="link">
                 <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>
                 <a href="SignIn.php"><button style="border:none;cursor:pointer;"><p class="link">Login</button></p></a>
