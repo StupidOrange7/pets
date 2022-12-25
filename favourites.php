@@ -102,3 +102,4 @@ require_once('Config.php');
 <footer><?php include 'footer.html'; ?></footer>
 
 </html>
+</html>
