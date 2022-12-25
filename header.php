@@ -7,9 +7,9 @@ if ($email != '') {
   <div class="dropdown"> <button class="dropbtn">
     </button>
     <div class="dropdown-content">
-      <a href="MyAnimals.php">My Animals</a>
-      <a href="Account.php">Account</a>
-      <a href="logout.php">Logout</a>
+      <a href="MyAnimals.php">My Animals</a><br>
+      <a href="Account.php">Account</a><br>
+      <a href="logout.php">Logout</a><br>
     </div>
   </div>
    <button class="btn heart">
