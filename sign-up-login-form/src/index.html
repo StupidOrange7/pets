@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header style="background-color:#efeef1; ">
+		<p class="left_header_adopt"> <img src="logoo.png" width="130" height="100"></p>
+	   <button class="btn heart">
+			<a href="favourites.php"><img src="heart.png"></a>
+	   </button> 
+	   <div class="dropdown"> <button class="dropbtn">
+		</button>
+		<div class="dropdown-content">
+			<a href="Uploads_Bought.php">My Animals</a>
+			<a href="Account.php">Account</a>
+			<a href="Setting.php">Setting</a>
+			</div>
+		</div>
+	</header>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
