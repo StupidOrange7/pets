@@ -33,18 +33,8 @@ require_once('Config.php');
 <li>
 
 </ul>
-<a style="text-decoration: none;" href="Account.php"><img src="update_button.png" height="40" width="85"></a>
+<a style="text-decoration: none;" href="update_user.php"><img src="update_button.png" height="40" width="85"></a>
 </form>
-<!--
-      
-      <label style="font-size: larger; color:#7c09a8" >Name: </p> </label>
-
-      <label style="font-size: larger;color:#7c09a8">Age: </p></label>
-
-      <label style="font-size: larger;color:#7c09a8">Address: <?php echo $_SESSION["address"]; ?></p></label>
-
-      <label style="font-size: larger;color:#7c09a8">Email: </p></label>
---></center>
   </div>
 </body>
 <footer><?php include 'footer.html'; ?></footer>
