@@ -2,8 +2,8 @@
 session_start();
 include ("conn.php");
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-$id = isset($_GET['animid']) ? $_GET['animid'] : '';
-$idd = isset($_GET['value']) ? $_GET['value'] : '';
+$id = isset($_POST['animid']) ? $_POST['animid'] : '';
+$idd = isset($_POST['value']) ? $_POST['value'] : '';
 $sql = "DELETE FROM animals WHERE id='$id' ";
 if (!mysqli_query($con, $sql))
 {

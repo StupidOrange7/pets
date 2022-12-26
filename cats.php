@@ -43,7 +43,7 @@ require_once('Config.php');
                   <!--<button id=# $row["id"]?> class="inner_button" onclick="location.href='delete_pet.php'">
                   <img src="images/delete.png" width="30" height="34">
                   </button>-->
-                <form method="GET" action="delete_pet.php">
+                <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
                   <img src="images/delete.png" width="30" height="34">
                   </button>
