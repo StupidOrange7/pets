@@ -11,6 +11,7 @@ require_once('Config.php');
   <?php include 'header.php'; ?>
 </header>
 <center>
+<body class="window_fit">
   <div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
       <?php

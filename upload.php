@@ -29,7 +29,7 @@ require'Config.php' ;
                         <option value="fish">Fish</option>
                         <option value="turtle">Turtle</option>
                     </select>
-					<button class="button_submit" style="width: 40%;"> <span class="button_submit" style="position: relative; height: 2px;top:8px;width: 40%;font: system-ui;">Upload</span></button>
+					<input class="button_submit" type="submit" value="Upload">
 				</form>
         
         <script>
