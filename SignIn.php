@@ -33,11 +33,12 @@ if(count($_POST)>0)
 					<label>Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="password" placeholder="Password" required="">
-					<input class="button_submit" type="submit" value="Login" onclick="fun()">
+					<input class="button_submit" type="submit" value="Login" onclick="fun1()">
 					<input class="button_submit" type="submit" value="Sign Up" onclick="fun2()">
 				</form>
-				<script>function fun(){window.location.href = "SignIn.php";}
-				function fun2(){window.location.href = "SignUp.php";}</script>
+				<script>function fun1(){location.href = "SignIn.php";}
+				function fun2(){location.href = "SignUp.php";}
+				</script>
 			</div>
 		</div>
 		</center> </body>

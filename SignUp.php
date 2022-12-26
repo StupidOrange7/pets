@@ -25,7 +25,6 @@ session_start();
 					<input class="button_submit" type="submit" value="Sign Up">
 				</button>
 				</form>
-        
         <script>
             function myFunction() {
             return "Are you sure you want to close the site?";

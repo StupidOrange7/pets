@@ -8,6 +8,11 @@
     border: 2px solid black;
     font-size: 15px;
 }
+.inner_button .delete:hover{
+    background-color: rgb(212, 21, 21);
+    opacity: 0.5;
+    transition-duration: 0s 100s;
+}
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 42%);
@@ -24,7 +29,7 @@
         justify-content: center;
         position: relative;
         top: 18px;
-        left: 17%;
+        left: 15%;
     }
     .inner_button1:hover{background-color: red;}
     .button {

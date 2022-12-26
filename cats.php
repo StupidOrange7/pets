@@ -29,7 +29,7 @@ require_once('Config.php');
               if ($row["price"] == 0) { ?>
                 <p>Up for adoption</p>
               <?php } else {
-                echo $row["price"];
+                echo $row["price"]."$";
               }
               ?>
             </button>

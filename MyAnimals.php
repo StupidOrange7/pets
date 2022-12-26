@@ -32,7 +32,7 @@ require_once('Config.php');
                   <p>Up for adoption</p>
           <?php } else 
           {
-            echo $row["price"];
+            echo $row["price"]."$";
           }
               ?>
             </button>
