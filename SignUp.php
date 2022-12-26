@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet"  href="SignIn.css">
-<link rel="stylesheet" href="trial.css">
+<link rel="stylesheet" href="trial.css">  
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <header class="header" style="background-color:#efeef1; ">
 <?php include 'header.php';?>
