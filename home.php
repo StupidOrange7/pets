@@ -15,7 +15,7 @@ require_once('Config.php') ;
             <center>
              <form action="result.php" method="post">
                  <input type="text"
-                     placeholder="      Search Dogs, Cats"
+                     placeholder="      Search for the type of the animal, preferred name, preferred  or even age (IN MONTHS)"
                      name="search">
                 <button class="butt" type="submit" formaction="result.php">
                     <img src="images/search.png" width="60px">
@@ -29,19 +29,52 @@ require_once('Config.php') ;
              </center>
          </div><center>
             <a href="cats.php">
-            <button class="buttons cat">
-            </button></a>
-            <a href="dogs.php"><button class="buttons dog"></button> </a>
-            <article class="pets"><p>Cats</p><p> Dogs </p></article>
+                <button class="buttons cat">
+                </button>
+            </a>
+            <a href="dogs.php">
+                <button class="buttons dog">
+                </button> 
+            </a>
+            <a href="fish.php">
+                <button class="buttons fish">
+                </button>
+            </a>
+            <a href="turtle.php">
+                <button class="buttons turtle">
+                </button> 
+            </a>
+            <article class="pets"><p>Cats</p><p> Dogs </p><p>Fish</p><p> Turtles </p></article>
+            
+            <article class="pets"></article>
         </center>
          <div style="border: dotted 6px;"> <center>
-            <img src="tyler.jpg" height="15%" width="15%">
-            <img src="tyler.jpg" height="15%" width="15%">
-            <img src="tyler.jpg" height="15%" width="15%">
-            <img src="tyler.jpg" height="15%" width="15%">
-            <img src="tyler.jpg" height="15%" width="15%">
-            <img src="tyler.jpg" height="15%" width="15%">
-            
+         <!--
+            <img src="images/tyler.jpg" height="15%" width="15%">
+            <img src="images/tyler.jpg" height="15%" width="15%">
+            <img src="images/tyler.jpg" height="15%" width="15%">
+            <img src="images/tyler.jpg" height="15%" width="15%">
+            <img src="images/tyler.jpg" height="15%" width="15%">
+            <img src="images/tyler.jpg" height="15%" width="15%">
+        -->
+        <?php
+            $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
+            if (!$connection) 
+            {
+                echo "Error connecting to MySQL: " . mysqli_connect_error();
+                die;
+            }
+            $random= mt_rand(1,10) ;
+            $sql = "SELECT * FROM animals WHERE id = '$random'"; //EDITED HERE YA SARA FL WHERE
+            $result = $connection->query($sql);
+
+            if ($result->num_rows > 0) 
+            {
+                while ($row = $result->fetch_assoc()) 
+                {
+                    echo '<img src="images/' . $row["a_image"] . '" style="height: 15%;width: 15%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
+                }
+            }?>
         </center>
          </div>
 </body>

@@ -40,9 +40,9 @@
         FOREIGN KEY (id_fav) REFERENCES animals (id) ON DELETE RESTRICT ON UPDATE RESTRICT
     )";
 
-    $sqlm = "ALTER TABLE `animals` ADD FOREIGN KEY ('email_ani') REFERENCES 'info'(`email`) ON DELETE RESTRICT ON UPDATE RESTRICT";
+    $sqlm = "ALTER TABLE animals ADD FOREIGN KEY (email_ani) REFERENCES info (email) ON DELETE RESTRICT ON UPDATE RESTRICT";
   
-    if($con->query($sqla)===TRUE )
+    if($con->query($sqli)===TRUE )
     {
         echo "Tables created successfully <br>";
     }
@@ -58,7 +58,7 @@
     {
         echo "Error creating Table: ".$con->error."<br>";
     }
-    if($con->query($sqli)===TRUE)
+    if($con->query($sqla)===TRUE)
     {
         echo "Tables created successfully <br>";
     }

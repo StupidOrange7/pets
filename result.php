@@ -19,35 +19,27 @@ require_once('Config.php');
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
       }
-      $result = mysqli_query($connection, "SELECT * FROM animals WHERE type LIKE 'cat';");
+      $search = isset($_POST['search']) ? $_POST['search'] : '';
+      $result = mysqli_query($connection, "SELECT * FROM animals WHERE a_name LIKE '$search' OR a_gender LIKE '$search' OR price LIKE '$search' OR month LIKE '$search' OR type LIKE '$search';");
       if (mysqli_num_rows($result) > 0) {
-        while ($row = $result->fetch_assoc()) 
-        {
+        while ($row = $result->fetch_assoc()) {
       ?> <div>
-            <button class="button"> 
-              <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
-                if ($row["price"] == 0) 
-                { ?>
-                  <p>Up for adoption</p>
-          <?php } else 
-          {
-            echo $row["price"];
-          }
+            <button class="button"> <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
+                                    if ($row["price"] == 0) { ?>
+                <p>Up for adoption</p>
+              <?php } else {
+                                      echo $row["price"];
+                                    }
               ?>
-
             </button>
+
             <div class="inner_button">
               <button id=favorite onclick="location.href='sell.php'">Sell</button>
-              <?php if ($_SESSION['fname'] == 'admin') { 
-                #$_SESSION['animalID']=$row["id"];?>
-                  <!--<button id=# $row["id"]?> class="inner_button" onclick="location.href='delete_pet.php'">
-                  <img src="images/delete.png" width="30" height="34">
-                  </button>-->
-                <form method="GET" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Delete">
+              <?php if ($_SESSION['fname'] == 'admin') { ?>
+                <form method="POST">
+                  <button id=application class="inner_button" value="<?php $row["id"] ?>" onclick="location.href='delete_pet.php'">
                   <img src="images/delete.png" width="30" height="34">
                   </button>
-                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
             </div>
           </div>

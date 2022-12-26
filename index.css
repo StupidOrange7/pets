@@ -37,8 +37,19 @@
      {
         cursor: pointer;
         background-image: url("images/cat.png");
-        background-size: cover;
-          
+        background-size: cover;  
+     }
+     .buttons.fish
+     {
+        cursor: pointer;
+        background-image: url("images/fish.png");
+        background-size: cover;  
+     }
+     .buttons.turtle
+     {
+        cursor: pointer;
+        background-image: url("images/turtle.png");
+        background-size: cover;  
      }
     .friend
     {
