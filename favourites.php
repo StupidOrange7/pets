@@ -10,6 +10,7 @@
         bottom: 50%;
         font-size: 200%;
     }
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -73,33 +74,37 @@ require_once('Config.php');
         <?php include 'header.php'; ?>
     </header>
     <center>
-        <div style="background-color: #efeef1;height: 90vh; width:100%">
-            <?php
-            $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
-            if (!$connection) {
-                echo "Error connecting to MySQL: " . mysqli_connect_error();
-                die;
-            }
-            $email = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
-            $sql = "SELECT * FROM animals,favorite WHERE email_fav='$email' AND id_fav=id";
-            $result = $connection->query($sql);
+        <div style="background-image: url('bgg.jpg');background-repeat: none;">
+            <div class="wrapper">
+                <?php
+                $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
+                if (!$connection) {
+                    echo "Error connecting to MySQL: " . mysqli_connect_error();
+                    die;
+                }
+                $email = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
+                $sql = "SELECT * FROM animals,favorite WHERE email_fav='$email' AND id_fav=id";
+                $result = $connection->query($sql);
 
-            if ($result->num_rows > 0 ) {
-                while ($row = $result->fetch_assoc()) {
-            ?> <div> <button class="button"><img src="<?php echo $row["image"] ?>" class="button img">
-                            <?php if ($row["price"] == 0) { ?><p>Up for adoption</p>
-                            <?php } else {
-                                echo $row["price"];
-                            } ?></button>
-                        <button id=application class="inner_button" onclick="location.href='application.php'">Get</button>
-                    </div>
-            <?php }
-            } else
-                echo "0 results";
-            $connection->close(); ?>
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                ?> <div>
+                            <button class="button">
+                                <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
+                                if ($row["price"] == 0) { ?>
+                                    <p>Up for adoption</p>
+                                <?php } else {
+                                    echo $row["price"];
+                                }
+                                ?>
+                            </button>
+                        </div>
+                <?php }
+                } else
+                    echo "0 results";
+                $connection->close(); ?>
+            </div>
+            <footer><?php include 'footer.html'; ?></footer>
         </div>
-</body>
-<footer><?php include 'footer.html'; ?></footer>
-
-</html>
+        </body>
 </html>

@@ -21,33 +21,28 @@ require_once('Config.php');
       }
       $result = mysqli_query($connection, "SELECT * FROM animals WHERE type LIKE 'cat';");
       if (mysqli_num_rows($result) > 0) {
-        while ($row = $result->fetch_assoc()) 
-        {
+        while ($row = $result->fetch_assoc()) {
       ?> <div>
-            <button class="button"> 
+            <button class="button">
               <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
-                if ($row["price"] == 0) 
-                { ?>
-                  <p>Up for adoption</p>
-          <?php } else 
-          {
-            echo $row["price"];
-          }
+              if ($row["price"] == 0) { ?>
+                <p>Up for adoption</p>
+              <?php } else {
+                echo $row["price"];
+              }
               ?>
-
             </button>
             <div class="inner_button">
-              <button id=favorite onclick="location.href='sell.php'">Sell</button>
-              <?php if ($_SESSION['fname'] == 'admin') { 
-                #$_SESSION['animalID']=$row["id"];?>
-                  <!--<button id=# $row["id"]?> class="inner_button" onclick="location.href='delete_pet.php'">
-                  <img src="images/delete.png" width="30" height="34">
-                  </button>-->
-                <form method="POST" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Delete">
-                  <img src="images/delete.png" width="30" height="34">
+            <form method="POST" action="add_fav.php">
+                  <input type="submit" value="Favorite">
                   </button>
-                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
+                  <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+                </form>
+              <?php if ($_SESSION['fname'] == 'admin') { ?>
+                <form method="POST" action="delete_pet.php">
+                  <input type="submit" value="Delete">
+                  </button>
+                  <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
                 </form>
             </div>
           </div>
@@ -59,5 +54,5 @@ require_once('Config.php');
     </div>
     <footer><?php include 'footer.html'; ?></footer>
     </body>
-
+  </div>
 </html>
