@@ -38,11 +38,7 @@ require_once('Config.php');
             </button>
             <div class="inner_button">
               <button id=favorite onclick="location.href='sell.php'">Sell</button>
-              <?php if ($_SESSION['fname'] == 'admin') { 
-                #$_SESSION['animalID']=$row["id"];?>
-                  <!--<button id=# $row["id"]?> class="inner_button" onclick="location.href='delete_pet.php'">
-                  <img src="images/delete.png" width="30" height="34">
-                  </button>-->
+              <?php if ($_SESSION['fname'] == 'admin') {?>
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
                   <img src="images/delete.png" width="30" height="34">
@@ -59,5 +55,4 @@ require_once('Config.php');
     </div>
     <footer><?php include 'footer.html'; ?></footer>
     </body>
-
 </html>

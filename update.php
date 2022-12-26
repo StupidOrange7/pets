@@ -26,7 +26,7 @@ require_once('Config.php');
     <?php echo $_SESSION["email"]; ?></li>
 <li>
     <label for="address">Address</label>
-    <input type="text" name="address" maxlength="100"></li>
+    <input type="text" name="address" placement maxlength="100"></li>
     <li>
     <label for="age">Age</label>
     <input type="number" name="age" maxlength="2"></li>
