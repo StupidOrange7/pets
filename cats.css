@@ -9,11 +9,6 @@
     font-size: 15px;
     position: inherit;
 }
-.inner_button .delete:hover{
-    background-color: rgb(212, 21, 21);
-    opacity: 0.5;
-    transition-duration: 0s 100s;
-}
     .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 42%);
@@ -31,10 +26,7 @@
         top: 18px;
         left: 18%;
         gap: 23px;
-        font-size: 17px;
-        border: 2px;
     }
-    .inner_button:hover{background-color: green;}
     .button {
         margin-left: 50%;
         height: 19em;
@@ -56,4 +48,12 @@
         background-color: rgb(144, 138, 144);
     }
     .button:active{background-color: rgb(24, 25, 24); opacity: 0.5; transition-duration: 0s 100s;}
-    
+    input[value="Delete"]:hover { background-color: red; color: white;}
+    input[value="View Animal"]:hover { background-color: gray; color: black;}
+    input[value="Buy/Adopt"]:hover { background-color: greenyellow;color: black;}
+    input[value="Favorite"]:hover { background-color: red;color: white;}
+    input{
+    border-radius: 3px;
+    border: 2px solid black;
+    font-size: 15px;
+    }

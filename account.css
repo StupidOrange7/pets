@@ -2,6 +2,12 @@ image{
     border-radius: 2px;
     border: #6d44b8 3px;
 }
+p {
+    font-family: system-ui;
+    height: 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
 .buttonn{
     width: 60%;
     height: 40px;

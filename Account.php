@@ -20,36 +20,30 @@ require_once('Config.php');
 <ul>
 <li>
     <label for="name">First Name</label>
-    <?php echo $_SESSION["fname"]; ?>
+   <p> <?php echo $_SESSION["fname"]; ?></p>
     </li>
     <li>
     <label for="name">Last Name</label>
-    <?php echo $_SESSION["lname"]; ?>
+    <p><?php echo $_SESSION["lname"]; ?></p>
     </li>
 <li>
     <label for="email">Email</label>
-    <?php echo $_SESSION["email"]; ?></li>
+    <p> <?php echo $_SESSION["email"]; ?></p>
+</li>
 <li>
     <label for="address">Address</label>
-    <?php echo $_SESSION["address"]; ?></li>
+    <p> <?php echo $_SESSION["address"]; ?></p>
+</li>
     <li>
     <label for="age">Age</label>
-    <?php echo $_SESSION["age"]; ?></li>
+   <p> <?php echo $_SESSION["age"]; ?></p>
+</li>
 <li>
 
 </ul>
 <a style="text-decoration: none;" href="update.php"><img src="update_button.png" height="40" width="85"></a>
 </form>
-<!--
-      
-      <label style="font-size: larger; color:#7c09a8" >Name: </p> </label>
-
-      <label style="font-size: larger;color:#7c09a8">Age: </p></label>
-
-      <label style="font-size: larger;color:#7c09a8">Address: <?php echo $_SESSION["address"]; ?></p></label>
-
-      <label style="font-size: larger;color:#7c09a8">Email: </p></label>
---></center>
+</center>
   </div>
 </body>
 <footer><?php include 'footer.html'; ?></footer>
