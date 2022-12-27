@@ -36,7 +36,7 @@ require_once('Config.php');
           }
               ?>
             </button>
-            <div class="inner_button">
+            <div>
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
                   </button>

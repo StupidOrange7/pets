@@ -7,31 +7,34 @@
     border-radius: 3px;
     border: 2px solid black;
     font-size: 15px;
+    position: inherit;
 }
 .inner_button .delete:hover{
     background-color: rgb(212, 21, 21);
     opacity: 0.5;
     transition-duration: 0s 100s;
 }
-.wrapper {
+    .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 42%);
     grid-gap: 30px;
     margin-right: 42px;
-}
+        }
     .inner_button {
         display: flex;
         flex-direction: row;
         align-items: center;
         flex-wrap: nowrap;
-        border: none;
         cursor: pointer;
         justify-content: center;
         position: relative;
         top: 18px;
-        left: 15%;
+        left: 18%;
+        gap: 23px;
+        font-size: 17px;
+        border: 2px;
     }
-    .inner_button1:hover{background-color: red;}
+    .inner_button:hover{background-color: green;}
     .button {
         margin-left: 50%;
         height: 19em;
