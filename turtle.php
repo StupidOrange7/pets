@@ -10,9 +10,9 @@ require_once('Config.php');
 <header class="header" style="background-color:#efeef1; ">
   <?php include 'header.php'; ?>
 </header>
-<center>
+
 <body class="window_fit">
-  <div style="background-image: url('bgg.jpg');background-repeat: none;">
+  <center><div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
       <?php
       $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
@@ -33,7 +33,7 @@ require_once('Config.php');
                   <p>Up for adoption</p>
           <?php } else 
           {
-            echo $row["price"];
+            echo $row["price"]."$";
           }
               ?>
 
@@ -61,6 +61,7 @@ require_once('Config.php');
           }else {?><p class="no_res"> <?php echo "0 results"; ?>
             <?php }$connection->close(); ?>
     </div>
+    </center><footer><?php include 'footer.html'; ?></footer>
     </body>
-     <footer><?php include 'footer.html'; ?></footer>
+     
 </html>

@@ -36,9 +36,9 @@ require_once('Config.php');
           }
               ?>
             </button>
-            <div>
+            <div class="inner_button">
                 <form method="POST" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Remove">
+                <input type="submit" value="Remove">
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
                 <form method="POST" action="displayAnimal.php">
@@ -49,9 +49,8 @@ require_once('Config.php');
           </div>
     <?php 
             }
-          }else
-          ?><p class="no_res"><?php echo "0 results"; ?>
-          <?php $connection->close(); ?>
+          }else {?><p class="no_res"> <?php echo "0 results"; ?>
+          <?php }$connection->close(); ?>
     </div>
     <footer><?php include 'footer.html'; ?></footer>
     </body>

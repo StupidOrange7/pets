@@ -10,7 +10,7 @@ header{
 .uploadd {
     float: right;
     position: relative;
-    bottom: 55px;
+    bottom: 39px;
     right: 11px;
 }
 .heart {
@@ -18,7 +18,7 @@ header{
     float: right;
     position: relative;
     cursor: pointer;
-    bottom: 26px;
+    bottom: 11px;
     border: none;
     text-decoration: none;
     right: 12px;
@@ -35,7 +35,7 @@ a{
     background-repeat: no-repeat;
     border: none;
     float: right;
-    bottom: 20px;
+    bottom: 4px;
     position: relative;
 }
 .dropdown-content {
@@ -48,7 +48,7 @@ a{
     margin: 0px;
     z-index: 1;
     right: 1px;
-    top:90px;
+    top:77px;
     font-weight:100px;
     line-height: 50px;
 } 
@@ -67,7 +67,7 @@ a{
     background-color: #6504b5;
       text-align: center;
       position: relative;
-    margin-top: 32px;
+    margin-top: 36%;
     height: 82px;
   }
   
@@ -79,8 +79,11 @@ a{
   .social-wrapper ul li {
       display: inline;
       margin: 0 5px;
-      padding: 10px; /*spacing between icons*/
-  }
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      top: 12px;/*spacing between icons*/
+}
   
   .twitter-icon,
   .facebook-icon,

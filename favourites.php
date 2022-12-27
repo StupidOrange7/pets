@@ -6,12 +6,12 @@
 <?php
 session_start();
 require_once('Config.php');
-?>
+?><center>
 <body class="window_fit">
         <header class="header" style="background-color:#efeef1; ">
         <?php include 'header.php'; ?>
         </header>
-        <center>
+        
             <div>
                 <div class="wrapper">
                 <?php
@@ -56,5 +56,6 @@ require_once('Config.php');
           <?php $connection->close(); ?>
     </div>
     </body>
+        </center>
      <footer><?php include 'footer.html'; ?></footer>
 </html>

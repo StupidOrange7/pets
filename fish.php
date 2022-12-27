@@ -35,7 +35,6 @@ require_once('Config.php');
             echo $row["price"];
           }
               ?>
-
             </button>
             <div class="inner_button">
             <form method="POST" action="add_fav.php">
