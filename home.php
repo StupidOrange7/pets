@@ -71,7 +71,6 @@ require_once('Config.php') ;
                 $x++;
             }
             $random= mt_rand(1,intval($x));
-            echo $random;
             $sql = "SELECT * FROM animals WHERE id = '$random'"; //EDITED HERE YA SARA FL WHERE
             $result = $connection->query($sql);
 

@@ -19,31 +19,18 @@ require_once('Config.php');
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
       }
-      $email = $_SESSION['email'];
-      $result = mysqli_query($connection, "SELECT * FROM animals WHERE email_ani LIKE '".$email."';");
+      $result = mysqli_query($connection, "SELECT * FROM info");
       if (mysqli_num_rows($result) > 0) {
         while ($row = $result->fetch_assoc()) 
         {
       ?> <div>
             <button class="button"> 
-              <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
-                if ($row["price"] == 0) 
-                { ?>
-                  <p>Up for adoption</p>
-          <?php } else 
-          {
-            echo $row["price"]."$";
-          }
-              ?>
+              <?php echo '<img src="images/' . $row["image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';?>
             </button>
             <div>
-                <form method="POST" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Remove">
-                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
-                </form>
-                <form method="POST" action="displayAnimal.php">
-                <input type="submit" value="View Animal">
-                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+                <form method="POST" action="displayUser.php">
+                <input type="submit" value="View User">
+                <input type="hidden" name="useremail" value="<?php echo $row["email"]; ?>">
             </form>
             </div>
           </div>

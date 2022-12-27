@@ -14,7 +14,7 @@ require_once('Config.php');
 
   <div>
     <center><br><br><br>
-        <img class="pic" src="images/' . $_SESSION["a_image"] . '" height="150" width="150"></p>
+    <?php echo '<img class="pic" src="images/'. $_SESSION["image"] .'" height="150" width="150">';?>
       
     <form class="form-style-7" action="update.php" method="post">
 <ul>

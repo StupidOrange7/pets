@@ -49,35 +49,34 @@ if ($email != '') {
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
     }
-    $id = isset($_POST['animid']) ? $_POST['animid'] : '';
-    echo $id;
-    $sql = "SELECT * FROM animals WHERE id='$id'";
+    $email = isset($_POST['useremail']) ? $_POST['useremail'] : '';
+    $admin = 'admin@gmail.com';
+    $sql = "SELECT * FROM info WHERE email='$email' AND email!='$admin'";
     $result = $connection->query($sql);
     $row = $result->fetch_assoc()
 ?>
   <div>
     <center><br><br><br>
-        <?php echo '<img class="pic" src="images/' . $row["a_image"] . '" height="150" width="150"></p>' ?>
-      
+    <?php echo '<img class="pic" src="images/' . $row["image"] . '" height="150" width="150"></p>' ?>
     <form class="form-style-7">
 <ul>
 <li>
-    <label for="name">Name</label>
-    <?php echo $row["a_name"]; ?>
+    <label for="name">First Name</label>
+    <?php echo $row["fname"]; ?>
     </li>
     <li>
-    <label for="name">Type</label>
-    <?php echo $row["type"]; ?>
+    <label for="name">Last Name</label>
+    <?php echo $row["lname"]; ?>
     </li>
 <li>
-    <label for="email">Gender</label>
-    <?php echo $row["a_gender"]; ?></li>
+    <label for="email">Email</label>
+    <?php echo $row["email"]; ?></li>
 <li>
-    <label for="address">Price</label>
-    <?php echo '$'.$row["price"]; ?></li>
+    <label for="address">Address</label>
+    <?php echo $row["address"]; ?></li>
     <li>
     <label for="age">Age</label>
-    <?php echo $row["month"].' months'; ?></li>
+    <?php echo $row["age"].' years'; ?></li>
 <li>
 
 </ul>

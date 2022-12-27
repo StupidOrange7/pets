@@ -10,6 +10,9 @@ if ($email != '') {
       <a href="MyAnimals.php">My Animals</a><br>
       <a href="Account.php">Account</a><br>
       <a href="logout.php">Logout</a><br>
+      <?php if ($_SESSION['fname'] == 'admin') { ?>
+      <a href="Users.php">Users</a><br>
+      <?php }?>
     </div>
   </div>
    <button class="btn heart">
