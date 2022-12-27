@@ -70,7 +70,7 @@ require_once('Config.php') ;
             while ($row = $result->fetch_assoc()) {
                 $x++;
             }
-            $random= mt_rand(1,intval($x));
+            $random= mt_rand(1,$x);
             $sql = "SELECT * FROM animals WHERE id = '$random'"; //EDITED HERE YA SARA FL WHERE
             $result = $connection->query($sql);
 

@@ -49,8 +49,7 @@ if ($email != '') {
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
     }
-    $id = isset($_POST['animid']) ? $_POST['animid'] : '';
-    echo $id;
+    $id = isset($_POST['animid']) ? $_POST['animid'] : '';  
     $sql = "SELECT * FROM animals WHERE id='$id'";
     $result = $connection->query($sql);
     $row = $result->fetch_assoc()
