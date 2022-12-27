@@ -22,16 +22,20 @@ require_once('Config.php');
       }
       $result = mysqli_query($connection, "SELECT * FROM animals WHERE type LIKE 'fish';");
       if (mysqli_num_rows($result) > 0) {
-        while ($row = $result->fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) 
+        {
       ?> <div>
-            <button class="button">
+            <button class="button"> 
               <?php echo '<img src="images/' . $row["a_image"] . '" style="height: 90%;width: 90%;margin-left: auto;margin-right: auto;border-radius: 13px;"/>';
-              if ($row["price"] == 0) { ?>
-                <p>Up for adoption</p>
-              <?php } else {
-                echo $row["price"]."$";
-              }
+                if ($row["price"] == 0) 
+                { ?>
+                  <p>Up for adoption</p>
+          <?php } else 
+          {
+            echo $row["price"];
+          }
               ?>
+
             </button>
             <div class="inner_button">
             <form method="POST" action="add_fav.php">
@@ -48,18 +52,19 @@ require_once('Config.php');
             </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
                 <form method="POST" action="delete_pet.php">
-                  <input type="submit" value="Delete">
-                  <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+                <input type="submit" class="inner_button" value="Delete">
+                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
             </div>
           </div>
-    <?php }
+    <?php }?></div>
+          </div><?php
             }
           } else
             echo "0 results";
           $connection->close(); ?>
     </div>
-    <footer><?php include 'footer.html'; ?></footer>
     </body>
-  </div>
+     <footer><?php include 'footer.html'; ?></footer>
+
 </html>
