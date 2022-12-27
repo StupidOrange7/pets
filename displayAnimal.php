@@ -43,34 +43,44 @@ if ($email != '') {
 ?>
 </header>
 <body>
-
+<?php
+    $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
+    if (!$connection) {
+        echo "Error connecting to MySQL: " . mysqli_connect_error();
+        die;
+    }
+    $id = isset($_POST['animid']) ? $_POST['animid'] : '';
+    echo $id;
+    $sql = "SELECT * FROM animals WHERE id='$id'";
+    $result = $connection->query($sql);
+    $row = $result->fetch_assoc()
+?>
   <div>
     <center><br><br><br>
-        <img class="pic" src="images/' . $_SESSION["a_image"] . '" height="150" width="150"></p>
+        <img class="pic" src="images/' . $row["a_image"] . '" height="150" width="150"></p>
       
-    <form class="form-style-7" action="update.php" method="post">
+    <form class="form-style-7">
 <ul>
 <li>
-    <label for="name">First Name</label>
-    <?php echo $_SESSION["fname"]; ?>
+    <label for="name">Name</label>
+    <?php echo $row["a_name"]; ?>
     </li>
     <li>
-    <label for="name">Last Name</label>
-    <?php echo $_SESSION["lname"]; ?>
+    <label for="name">Type</label>
+    <?php echo $row["type"]; ?>
     </li>
 <li>
-    <label for="email">Email</label>
-    <?php echo $_SESSION["email"]; ?></li>
+    <label for="email">Gender</label>
+    <?php echo $row["a_gender"]; ?></li>
 <li>
-    <label for="address">Address</label>
-    <?php echo $_SESSION["address"]; ?></li>
+    <label for="address">Price</label>
+    <?php echo '$'.$row["price"]; ?></li>
     <li>
     <label for="age">Age</label>
-    <?php echo $_SESSION["age"]; ?></li>
+    <?php echo $row["month"].' months'; ?></li>
 <li>
 
 </ul>
-<a style="text-decoration: none;" href="update.php"><img src="update_button.png" height="40" width="85"></a>
 </form>
 <!--
       
@@ -78,12 +88,13 @@ if ($email != '') {
 
       <label style="font-size: larger;color:#7c09a8">Age: </p></label>
 
-      <label style="font-size: larger;color:#7c09a8">Address: <?php echo $_SESSION["address"]; ?></p></label>
+      <label style="font-size: larger;color:#7c09a8">Address: <?php #echo $_SESSION["address"]; ?></p></label>
 
       <label style="font-size: larger;color:#7c09a8">Email: </p></label>
 --></center>
   </div>
 </body>
+<?php $connection->close();?>
 <footer><?php include 'footer.html'; ?></footer>
 
 </html>

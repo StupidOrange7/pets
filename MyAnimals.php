@@ -40,7 +40,6 @@ require_once('Config.php');
             <div class="inner_button">
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
-                  <img src="images/delete.png" width="30" height="34">
                   </button>
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>

@@ -34,14 +34,16 @@ require_once('Config.php');
             </button>
             <div class="inner_button">
             <form method="POST" action="add_fav.php">
-                  <input type="submit" value="Favorite">
-                  </button>
-                  <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
-                </form>
+                <input type="submit" value="Favorite">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+            <form method="POST" action="displayAnimal.php">
+                <input type="submit" value="View Animal">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
                 <form method="POST" action="delete_pet.php">
                   <input type="submit" value="Delete">
-                  </button>
                   <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
                 </form>
             </div>

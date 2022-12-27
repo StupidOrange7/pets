@@ -64,7 +64,14 @@ require_once('Config.php') ;
                 echo "Error connecting to MySQL: " . mysqli_connect_error();
                 die;
             }
-            $random= mt_rand(1,10) ;
+            $sql1 = "SELECT * FROM animals";
+            $result = $connection->query($sql1);
+            $x=1;
+            while ($row = $result->fetch_assoc()) {
+                $x++;
+            }
+            $random= mt_rand(1,intval($x));
+            echo $random;
             $sql = "SELECT * FROM animals WHERE id = '$random'"; //EDITED HERE YA SARA FL WHERE
             $result = $connection->query($sql);
 
@@ -78,5 +85,6 @@ require_once('Config.php') ;
         </center>
          </div>
 </body>
+<?php $connection->close();?>
 <footer><?php include 'footer.html';?></footer>
 </html>
