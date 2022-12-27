@@ -32,11 +32,11 @@ require_once('Config.php');
                   <p>Up for adoption</p>
           <?php } else 
           {
-            echo $row["price"];
+            echo $row["price"]."$";
           }
               ?>
             </button>
-            <div class="inner_button">
+            <div>
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
                   </button>

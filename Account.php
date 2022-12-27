@@ -8,39 +8,7 @@ require_once('Config.php');
 <link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="form.css">
 <header class="header" style="background-color:#efeef1;">
-<p class="left_header_adopt"> <a href="home.php"><img src="images/logoo.png" width="90" height="80"></a></p>
-<?php
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-if ($email != '') {
-  echo $email; ?>
-  <div class="dropdown"> <button class="dropbtn">
-    </button>
-    <div class="dropdown-content">
-      <a href="Uploads_Bought.php">My Animals</a>
-      <a href="Account.php">Account</a>
-      <a href="logout.php">Logout</a>
-    </div>
-  </div>
-   <button class="btn heart">
-     <a href="favourites.php"><img src="images/heart.png" width="35px"></a>
-  </button>
-  <p class="uploadd"> <a href="upload.php"><img src="images/upload.png" width="60" height="60"></a></p>
-
-  <div>
-<?php
-} else {;
-?>
-  <div class="link">
-    <a href="SignUp.php"><button style="border:none; cursor:pointer;">
-        <p class="link"> Sign Up</p>
-      </button></a>
-    <a href="SignIn.php"><button style="border:none;cursor:pointer;">
-        <p class="link">Login
-      </button></p></a>
-  </div>
-<?php
-}
-?>
+<?php include 'header.php'; ?>
 </header>
 <body>
 
