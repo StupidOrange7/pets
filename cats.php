@@ -11,6 +11,7 @@ require_once('Config.php');
   <?php include 'header.php'; ?>
 </header>
 <center>
+  <body>
   <div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
       <?php
@@ -51,17 +52,15 @@ require_once('Config.php');
             </form>
               <?php if ($_SESSION['fname'] == 'admin') {?>
                 <form method="POST" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Delete">
+                <input type="submit" value="Delete">
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
-            </div>
-          </div>
-    <?php }?></div>
-          </div><?php
+    <?php }?></div></div>
+          <?php
             }
-          } else
-            echo "0 results";
-          $connection->close(); ?>
+          }else
+          ?><p class="no_res"><?php echo "0 results"; ?>
+          <?php $connection->close(); ?>
     </div>
     </body>
      <footer><?php include 'footer.html'; ?></footer>

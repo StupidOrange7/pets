@@ -49,9 +49,9 @@ require_once('Config.php');
           </div>
     <?php 
             }
-          } else
-            echo "0 results";
-          $connection->close(); ?>
+          }else
+          ?><p class="no_res"><?php echo "0 results"; ?>
+          <?php $connection->close(); ?>
     </div>
     <footer><?php include 'footer.html'; ?></footer>
     </body>

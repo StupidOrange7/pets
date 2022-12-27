@@ -47,12 +47,13 @@ require_once('Config.php');
                 <form method="POST" action="delete_pet.php">
                   <input type="submit" value="Delete">
                   <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
-                </form>
-                        </div>
+                  </form>
+            </div>
+          </div>
                 <?php }}
-                } else
-                    echo "0 results";
-                $connection->close(); ?>
+                }else
+                ?><p class="no_res"><?php echo "0 results"; ?>
+                <?php $connection->close(); ?>
             </div>
             <footer><?php include 'footer.html'; ?></footer>
         </div>

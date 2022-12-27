@@ -32,7 +32,6 @@ require_once('Config.php');
                                     }
               ?>
             </button>
-
             <div class="inner_button">
             <form method="POST" action="add_fav.php">
                 <input type="submit" value="Favorite">
@@ -56,7 +55,7 @@ require_once('Config.php');
           </div>
     <?php }
             }
-          } else
+          }else
             echo "0 results";
           $connection->close(); ?>
     </div>
