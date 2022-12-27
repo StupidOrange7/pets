@@ -10,6 +10,7 @@ require_once('Config.php');
 <header class="header" style="background-color:#efeef1; ">
   <?php include 'header.php'; ?>
 </header>
+<body class="window_fit">
 <center>
   <div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
@@ -54,6 +55,7 @@ require_once('Config.php');
             echo "0 results";
           $connection->close(); ?>
     </div>
+        </center>
     <footer><?php include 'footer.html'; ?></footer>
     </body>
   </div>

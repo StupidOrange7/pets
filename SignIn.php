@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 require 'Config.php';
@@ -23,7 +22,7 @@ if(count($_POST)>0)
 <header class="header" style="background-color:#efeef1; ">
 <?php include 'header.php';?>
         </header>
-<link rel="stylesheet" type="text/css" href="main_new.css">
+<link rel="stylesheet" type="text/css" href="trial.css">
 <link rel="stylesheet" href="SignIn.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <body style="background-color:#c5b5e2">
