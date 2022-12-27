@@ -58,9 +58,8 @@ require_once('Config.php');
                 </form>
     <?php }?></div></div><?php
             }
-          }else
-          ?><p class="no_res"><?php echo "0 results"; ?>
-          <?php $connection->close(); ?>
+          }else {?><p class="no_res"> <?php echo "0 results"; ?>
+            <?php }$connection->close(); ?>
     </div>
     </body>
      <footer><?php include 'footer.html'; ?></footer>
