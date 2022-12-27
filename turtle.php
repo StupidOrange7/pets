@@ -20,6 +20,7 @@ require_once('Config.php');
         echo "Error connecting to MySQL: " . mysqli_connect_error();
         die;
       }
+      
       $result = mysqli_query($connection, "SELECT * FROM animals WHERE type LIKE 'turtle';");
       if (mysqli_num_rows($result) > 0) {
         while ($row = $result->fetch_assoc()) 
@@ -51,27 +52,16 @@ require_once('Config.php');
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
-            <form method="POST" action="animalForm.php">
-                <input type="submit" value="Buy/Adopt">
-                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
-            </form>
-              <?php if ($_SESSION['fname'] == 'admin') {?>
                 <form method="POST" action="delete_pet.php">
-                <input type="submit" class="inner_button" value="Delete">
+                <input type="submit" value="Delete">
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
-            </div>
-          </div>
-    <?php }?></div>
-          </div><?php
+    <?php }?></div></div><?php
             }
-          } else
-            echo "0 results";
-          $connection->close(); ?>
+          }else
+          ?><p class="no_res"><?php echo "0 results"; ?>
+          <?php $connection->close(); ?>
     </div>
-        </center>
-    <footer><?php include 'footer.html'; ?></footer>
     </body>
      <footer><?php include 'footer.html'; ?></footer>
-
 </html>

@@ -11,7 +11,7 @@ require_once('Config.php');
   <?php include 'header.php'; ?>
 </header>
 <center>
-  <body class="windo"
+  <body>
   <div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
       <?php
@@ -55,13 +55,12 @@ require_once('Config.php');
                 <input type="submit" value="Delete">
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
-            
     <?php }?></div></div>
           <?php
             }
-          } else
-            echo "0 results";
-          $connection->close(); ?>
+          }else
+          ?><p class="no_res"><?php echo "0 results"; ?>
+          <?php $connection->close(); ?>
     </div>
     </body>
      <footer><?php include 'footer.html'; ?></footer>

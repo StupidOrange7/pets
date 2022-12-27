@@ -57,3 +57,8 @@ body{
     border: 2px solid black;
     font-size: 15px;
     }
+    .no_res{
+        position: relative;
+        left: 63%;
+        top: 100px;
+    }
