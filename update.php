@@ -11,29 +11,35 @@ require_once('Config.php');
 <?php include 'header.php';?></header>
 <body>
 
-  <div>
+  <div >
     <center><br><br><br>
-        <img class="pic" src= height="150" width="150"></p>
-      
-    <form class="form-style-7" action="update.php" method="post">
+    <?php echo '<img class="pic" src="images/'. $_SESSION["image"] .'" height="150" width="150">';?>
+    </p>
+    <form class="form-style-7" action="update_user.php" method="post">
 <ul>
 <li>
-    <label for="name">Name</label>
-    <input type="text" name="name" maxlength="30">
-    </li>
+    <label for="name">First Name</label>
+    <input type="text" name="fname" maxlength="30">
+</li>
+<li>
+    <label for="name">Last Name</label>
+    <input type="text" name="lname" maxlength="30">
+</li>
 <li>
     <label for="email">Email</label>
     <?php echo $_SESSION["email"]; ?></li>
 <li>
     <label for="address">Address</label>
-    <input type="text" name="address" placement maxlength="100"></li>
-    <li>
-    <label for="age">Age</label>
-    <input type="number" name="age" maxlength="2"></li>
+    <input type="text" name="address" placement maxlength="100">
+</li>
 <li>
-
+    <label for="age">Age</label>
+    <input type="number" name="age" maxlength="2">
+</li>       
+<li>
+</li>
 </ul>
-<a style="text-decoration: none;" href="update_user.php"><img src="update_button.png" height="40" width="85"></a>
+<input type="submit" value="Update" class="inner_button">
 </form>
   </div>
 </body>

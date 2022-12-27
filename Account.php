@@ -14,13 +14,17 @@ require_once('Config.php');
 
   <div>
     <center><br><br><br>
-        <img class="pic" src="images/Daisy.jpeg" height="150" width="150"></p>
+        <img class="pic" src="images/' . $_SESSION["a_image"] . '" height="150" width="150"></p>
       
     <form class="form-style-7" action="update.php" method="post">
 <ul>
 <li>
-    <label for="name">Name</label>
-    <?php echo $_SESSION["fname"]." ".$_SESSION["lname"]; ?>
+    <label for="name">First Name</label>
+    <?php echo $_SESSION["fname"]; ?>
+    </li>
+    <li>
+    <label for="name">Last Name</label>
+    <?php echo $_SESSION["lname"]; ?>
     </li>
 <li>
     <label for="email">Email</label>
