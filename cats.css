@@ -1,4 +1,4 @@
-.window_fit{
+body{
     background-image: url(bgg.jpg);
     width: 100%;
     height: 100%;
@@ -24,7 +24,7 @@
         justify-content: center;
         position: relative;
         top: 18px;
-        left: 18%;
+        left: 17%;
         gap: 23px;
     }
     .button {

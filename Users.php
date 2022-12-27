@@ -29,7 +29,7 @@ require_once('Config.php');
             </button>
             <div>
                 <form method="POST" action="displayUser.php">
-                <input type="submit" value="View User">
+                <input class="inner_button" type="submit" value="View User">
                 <input type="hidden" name="useremail" value="<?php echo $row["email"]; ?>">
             </form>
             </div>
