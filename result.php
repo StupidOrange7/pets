@@ -34,13 +34,24 @@ require_once('Config.php');
             </button>
 
             <div class="inner_button">
-              <button id=favorite onclick="location.href='sell.php'">Sell</button>
+            <form method="POST" action="add_fav.php">
+                <input type="submit" value="Favorite">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+            <form method="POST" action="displayAnimal.php">
+                <input type="submit" value="View Animal">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+            <form method="POST" action="animalForm.php">
+                <input type="submit" value="Buy/Adopt">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
-                <form method="POST">
-                  <button id=application class="inner_button" value="<?php $row["id"] ?>" onclick="location.href='delete_pet.php'">
-                  <img src="images/delete.png" width="30" height="34">
-                  </button>
+                <form method="POST" action="delete_pet.php">
+                <input type="submit" class="inner_button" value="Delete">
+                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
+            </div>
             </div>
           </div>
     <?php }

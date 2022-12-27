@@ -51,10 +51,6 @@ require_once('Config.php');
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
-            <form method="POST" action="animalForm.php">
-                <input type="submit" value="Buy/Adopt">
-                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
-            </form>
               <?php if ($_SESSION['fname'] == 'admin') {?>
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" class="inner_button" value="Delete">
@@ -65,7 +61,8 @@ require_once('Config.php');
     <?php }?></div>
           </div><?php
             }
-          } else
+          } 
+      }else
             echo "0 results";
           $connection->close(); ?>
     </div>
