@@ -43,7 +43,7 @@ require_once('Config.php');
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
             <form method="POST" action="animalForm.php">
-                <input type="submit" value="animalForm">
+                <input type="submit" value="Buy/Adopt">
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>

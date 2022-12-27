@@ -10,8 +10,8 @@ require_once('Config.php');
 <header class="header" style="background-color:#efeef1; ">
   <?php include 'header.php'; ?>
 </header>
-<body class="window_fit">
 <center>
+<body class="window_fit">
   <div style="background-image: url('bgg.jpg');background-repeat: none;">
     <div class="wrapper">
       <?php
@@ -40,6 +40,10 @@ require_once('Config.php');
             </form>
             <form method="POST" action="displayAnimal.php">
                 <input type="submit" value="View Animal">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+            <form method="POST" action="animalForm.php">
+                <input type="submit" value="Buy/Adopt">
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
               <?php if ($_SESSION['fname'] == 'admin') { ?>
