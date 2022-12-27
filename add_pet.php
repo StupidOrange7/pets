@@ -11,10 +11,7 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 $sql = "INSERT INTO animals(a_name,a_gender,price,month,a_image,email_ani,type) VALUES ('$a_name','$a_gender','$price','$month','$a_image','$email','$type');";
 if (!mysqli_query($con, $sql)||$a_image==''||$a_name==''||$month==''||$a_gender==''||$price=='')
 {
-  $_SESSION['message'] = $con->error;
-  $msg =$_SESSION['message'];
-  echo "hi".$a_name.$type.$a_gender.$a_image.$price.$month.'<br>';
-//  header("Location: error_adding_animal.php");
+  header("Location: error_adding_animal.php");
     echo $msg;
 exit;
 }

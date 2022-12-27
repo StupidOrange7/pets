@@ -8,10 +8,10 @@ if ($email != '') {?>
     <div class="dropdown-content">
       <a href="MyAnimals.php">My Animals</a><br>
       <a href="Account.php">Account</a><br>
-      <a href="logout.php">Logout</a><br>
-      <?php if ($_SESSION['fname'] == 'admin') { ?>
+      <?php if ($_SESSION['email'] == 'admin@gmail.com') { ?>
       <a href="Users.php">Users</a><br>
       <?php }?>
+      <a href="logout.php">Logout</a><br>
     </div>
   </div>
    <button class="btn heart">

@@ -8,39 +8,8 @@ require_once('Config.php');
 <link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="form.css">
 <header class="header" style="background-color:#efeef1;">
-<p class="left_header_adopt"> <a href="home.php"><img src="images/logoo.png" width="90" height="80"></a></p>
-<?php
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-if ($email != '') {
-  echo $email; ?>
-  <div class="dropdown"> <button class="dropbtn">
-    </button>
-    <div class="dropdown-content">
-      <a href="Uploads_Bought.php">My Animals</a>
-      <a href="Account.php">Account</a>
-      <a href="logout.php">Logout</a>
-    </div>
-  </div>
-   <button class="btn heart">
-     <a href="favourites.php"><img src="images/heart.png" width="35px"></a>
-  </button>
-  <p class="uploadd"> <a href="upload.php"><img src="images/upload.png" width="60" height="60"></a></p>
-
+<?php include 'header.php';?>
   <div>
-<?php
-} else {;
-?>
-  <div class="link">
-    <a href="SignUp.php"><button style="border:none; cursor:pointer;">
-        <p class="link"> Sign Up</p>
-      </button></a>
-    <a href="SignIn.php"><button style="border:none;cursor:pointer;">
-        <p class="link">Login
-      </button></p></a>
-  </div>
-<?php
-}
-?>
 </header>
 <body>
 <?php
@@ -78,9 +47,24 @@ if ($email != '') {
     <label for="age">Age</label>
     <?php echo $row["month"].' months'; ?></li>
 <li>
-
 </ul>
 </form>
+<div class="inner_button">
+            <form method="POST" action="add_fav.php">
+                <input type="submit" value="Favorite">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+            <form method="POST" action="animalForm.php">
+                <input type="submit" value="Buy/Adopt">
+                <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
+            </form>
+              <?php if ($_SESSION['email'] == 'admin@gmail.com') {?>
+                <form method="POST" action="delete_pet.php">
+                <input type="submit" value="Delete">
+                <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
+                </form>
+                <button button id=favorite class="inner_button" onclick="location.href='home.php'">Back</button>
+    <?php }?></div>
 <!--
       
       <label style="font-size: larger; color:#7c09a8" >Name: </p> </label>
@@ -95,5 +79,4 @@ if ($email != '') {
 </body>
 <?php $connection->close();?>
 <footer><?php include 'footer.html'; ?></footer>
-
 </html>

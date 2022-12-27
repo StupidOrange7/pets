@@ -49,15 +49,15 @@ require_once('Config.php');
                 <input type="submit" value="Buy/Adopt">
                 <input type="hidden" name="animid" value="<?php echo $row["id"]; ?>">
             </form>
-              <?php if ($_SESSION['fname'] == 'admin') { ?>
+              <?php if ($_SESSION['email'] == 'admin@gmail.com') { ?>
                 <form method="POST" action="delete_pet.php">
                 <input type="submit" value="Delete">
                 <input type="hidden" name="animid" value="<?php echo $row["id"];?>">
                 </form>
     <?php }?></div></div><?php
             }
-          }else
-          ?><p class="no_res"><?php echo "0 results"; ?>
+          }else{
+          ?><p class="no_res"><?php echo "0 results"; }?>
           <?php $connection->close(); ?>
     </div>
     </body>

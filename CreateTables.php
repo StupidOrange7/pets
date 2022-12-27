@@ -52,11 +52,11 @@
     }
     if($con->query($sqlAdmin)===TRUE )
     {
-        echo "Tables created successfully <br>";
+        echo "Admin added successfully <br>";
     }
     else
     {
-        echo "Error creating Table: ".$con->error."<br>";
+        echo "Error adding Admin: ".$con->error."<br>";
     }
     if($con->query($sqla)===TRUE)
     {

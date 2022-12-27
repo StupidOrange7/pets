@@ -7,11 +7,7 @@ session_start();
 <link rel="stylesheet" href="main_new.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <header class="header" style="background-color:#efeef1; ">
-            <p class="left_header_adopt"> <a href="home.php"><img src="images/logoo.png" width="130" height="100"></a></p>
-                <div class="link">
-                <a href="SignUp.php" ><button style="border:none; cursor:pointer;"><p class="link"> Sign Up</p></button></a>
-                <a href="SignIn.php"><button style="border:none;cursor:pointer;"><p class="link">Login</button></p></a>
-                </div>
+<?php include 'header.php';?>
         </header>
 <body style="background-color:#c5b5e2" onunload="return myFunction()">
 	<center>
@@ -29,7 +25,7 @@ session_start();
 					<input type="checkbox" name="password" placeholder="" required="">
                     Upload Video of your home
 					<input type="file" name="image" placeholder="image">
-					<button class="button_submit" type="submit" value="Adopt"></button>
+					<button class="button_submit" type="submit" value="Adopt"><p style="position: relative;bottom: 0.3em;">Adopt</p></button>
 				</form>
         
         <script>

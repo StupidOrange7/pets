@@ -10,7 +10,6 @@ require_once('Config.php') ;
       <?php include 'header.php';?>
       </header>
       <body>
-        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav-->
         <div class="search">
             <center>
              <form action="result.php" method="post">

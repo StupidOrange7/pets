@@ -14,34 +14,46 @@ require_once('Config.php');
 
   <div>
     <center><br><br><br>
-    <?php echo '<img class="pic" src="images/'. $_SESSION["image"] .'" height="150" width="150">';?>
+    <?php echo '<img class="pic" src="images/'. $_SESSION["image"] .'" height="150" width="150">';
+    $connection  = mysqli_connect(SERVER, DBUSER, DBPASS, DBNAME);
+    if (!$connection) {
+        echo "Error connecting to MySQL: " . mysqli_connect_error();
+        die;
+    }
+    $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';  
+    $sql = "SELECT * FROM info WHERE email='$email'";
+    $result = $connection->query($sql);
+    $row = $result->fetch_assoc();
+?>
       
     <form class="form-style-7" action="update.php" method="post">
 <ul>
 <li>
-    <label for="name">First Name</label>
-   <p> <?php echo $_SESSION["fname"]; ?></p>
+    <label for="fname">First Name</label>
+   <p> <?php echo $row["fname"]; ?></p>
     </li>
     <li>
-    <label for="name">Last Name</label>
-    <p><?php echo $_SESSION["lname"]; ?></p>
+    <label for="lname">Last Name</label>
+    <p><?php echo $row["lname"]; ?></p>
     </li>
 <li>
     <label for="email">Email</label>
-    <p> <?php echo $_SESSION["email"]; ?></p>
+    <p> <?php echo $row["email"]; ?></p>
 </li>
 <li>
     <label for="address">Address</label>
-    <p> <?php echo $_SESSION["address"]; ?></p>
+    <p> <?php echo $row["address"]; ?></p>
 </li>
     <li>
     <label for="age">Age</label>
-   <p> <?php echo $_SESSION["age"]; ?></p>
+   <p> <?php echo $row["age"]." years"; ?></p>
 </li>
 <li>
 
 </ul>
+<?php if($_SESSION["email"]!="admin@gmail.com"){ ?>
 <a style="text-decoration: none;" href="update.php"><img src="update_button.png" height="40" width="85"></a>
+<?php }?>
 </form>
 </center>
   </div>

@@ -8,7 +8,8 @@ require_once('Config.php');
 <link rel="stylesheet" href="trial.css">
 <link rel="stylesheet" href="form.css">
 <header class="header" style="background-color:#efeef1;">
-<?php include 'header.php';?></header>
+<?php include 'header.php';?>
+</header>
 <body>
 
   <div >
@@ -19,22 +20,22 @@ require_once('Config.php');
 <ul>
 <li>
     <label for="name">First Name</label>
-    <input type="text" name="fname" maxlength="30">
+    <input type="text" name="fname" maxlength="30" value="<?php echo $_SESSION["fname"]; ?>">
 </li>
 <li>
     <label for="name">Last Name</label>
-    <input type="text" name="lname" maxlength="30">
+    <input type="text" name="lname" maxlength="30" value="<?php echo $_SESSION["lname"]; ?>">
 </li>
 <li>
     <label for="email">Email</label>
     <?php echo $_SESSION["email"]; ?></li>
 <li>
     <label for="address">Address</label>
-    <input type="text" name="address" placement maxlength="100">
+    <input type="text" name="address" placement maxlength="100" value="<?php echo $_SESSION["address"]; ?>">
 </li>
 <li>
     <label for="age">Age</label>
-    <input type="number" name="age" maxlength="2">
+    <input type="number" name="age" maxlength="2" value="<?php echo $_SESSION["age"]; ?>">
 </li>       
 <li>
 </li>
